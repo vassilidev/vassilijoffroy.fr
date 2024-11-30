@@ -56,7 +56,7 @@
                 <div>
                     <h2 class="text-4xl font-bold text-dracula-purple mb-6">@lang('about_title')</h2>
                     <p class="leading-loose mb-4">@lang('about_description')</p>
-                    <a href="#societes" class="text-dracula-green hover:underline">@lang('about_cta') &rarr;</a>
+                    <a href="#projects" class="text-dracula-green hover:underline">@lang('about_cta') &rarr;</a>
                 </div>
             </div>
         </div>
