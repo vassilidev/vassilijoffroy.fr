@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Vassili Joffroy - Entrepreneur & CTO spécialisé en Laravel, SaaS & Scraping</title>
+    <title>Vassili Joffroy - Entrepreneur & CEO et CTO spécialisé en Laravel, SaaS & Scraping</title>
     <meta name="description"
-          content="Développeur web spécialisé en Laravel, SaaS & Scraping. J'aide les entreprises à innover et à se développer dans l'ère numérique.">
+          content="Entrepreneur & Développeur web spécialisé en Laravel, SaaS & Scraping. J'aide les entreprises à innover et à se développer dans l'ère numérique.">
     <meta name="keywords" content="Vassili Joffroy, Développeur web, Laravel, SaaS, Scraping, CTO, Entrepreneur">
     <meta name="author" content="Vassili Joffroy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,8 @@
     <link rel="preload" href="{{ asset('food.jpeg') }}" as="image">
     <link rel="preload" href="{{ asset('clock.jpeg') }}" as="image">
     <link rel="preload" href="{{ asset('computer.jpeg') }}" as="image">
+
+    <link rel="icon" href="{{ asset('favicon.ico') }}">
 
     @vite('resources/css/app.css')
 </head>

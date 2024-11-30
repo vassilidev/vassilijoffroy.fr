@@ -2,7 +2,7 @@
      class="fixed top-0 left-0 right-0 bg-dracula-bg bg-opacity-90 backdrop-blur-md px-6 py-4 flex justify-between items-center z-50 transition duration-300">
     <a href="#hero"
        class="text-2xl font-bold text-dracula-purple focus:outline-none focus:ring-2 focus:ring-dracula-green">
-        Vassili Joffroy
+        <img src="{{ asset('_VJ_.png') }}" alt="Vassili Joffroy" class="h-10">
     </a>
     <ul class="hidden md:flex space-x-6">
         <li><a href="#about" class="hover:text-dracula-green transition">À Propos</a></li>

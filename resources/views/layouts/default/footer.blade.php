@@ -3,7 +3,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
             <!-- Branding -->
             <div class="text-center md:text-left mb-6 md:mb-0">
-                <h3 class="text-2xl font-bold text-dracula-purple">Vassili Joffroy</h3>
+                <img src="{{ asset('_VJ_.png') }}" alt="Vassili Joffroy" class="h-10">
             </div>
             <!-- Navigation -->
             <ul class="flex flex-wrap justify-center md:justify-start space-x-6">
