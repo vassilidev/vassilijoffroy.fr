@@ -14,6 +14,7 @@
   "passions_title": "Mes Passions",
   "testimonials_title": "Témoignages",
   "testimonials_intro": "Découvrez ce que mes clients disent de moi et de mon travail.",
-  "calendar_title": "Mes Disponibilités",
-  "calendar_intro": "Vous avez un projet en tête ? Réservez directement un créneau dans mon agenda pour que nous en discutions."
+  "contact_title": "Me Contacter",
+  "contact_intro": "Vous avez un projet en tête ? Réservez directement un créneau dans mon agenda pour que nous en discutions.",
+  "contact_cta": "Prendre Rendez-vous"
 }

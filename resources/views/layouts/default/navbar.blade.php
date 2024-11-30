@@ -9,7 +9,9 @@
         <li><a href="#projects" class="hover:text-dracula-green transition">Mes projets</a></li>
         <li><a href="#passions" class="hover:text-dracula-green transition">Passions</a></li>
         <li><a href="#testimonials" class="hover:text-dracula-green transition">Témoignages</a></li>
-        <li><a href="#calendar" class="hover:text-dracula-green transition">Disponibilités</a></li>
+        <li><a href="#contact"
+               class="bg-dracula-green text-dracula-bg px-4 py-2 rounded-full font-semibold hover:bg-dracula-green-700 transition duration-300">Contact</a>
+        </li>
     </ul>
     <!-- Mobile Menu Button -->
     <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Toggle menu">
@@ -27,6 +29,6 @@
         <a href="#passions" class="text-2xl text-dracula-foreground hover:text-dracula-green" onclick="toggleMenu()">Passions</a>
         <a href="#testimonials" class="text-2xl text-dracula-foreground hover:text-dracula-green"
            onclick="toggleMenu()">Témoignages</a>
-        <a href="#calendar" class="text-2xl text-dracula-foreground hover:text-dracula-green" onclick="toggleMenu()">Disponibilités</a>
+        <a href="#contact" class="text-2xl text-dracula-foreground hover:text-dracula-green" onclick="toggleMenu()">Disponibilités</a>
     </div>
 </div>

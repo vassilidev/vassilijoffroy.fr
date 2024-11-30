@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     @vite('resources/css/app.css')
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-dracula-bg text-dracula-foreground font-sans overflow-x-hidden">
@@ -29,12 +28,8 @@
 
 @include('layouts.default.footer')
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        AOS.init({mobile: false, once: true});
-
         // Custom Cursor
         const cursor = document.getElementById('cursor');
         document.addEventListener('mousemove', e => {

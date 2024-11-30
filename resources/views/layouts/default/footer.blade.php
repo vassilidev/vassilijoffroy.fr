@@ -4,7 +4,6 @@
             <!-- Branding -->
             <div class="text-center md:text-left mb-6 md:mb-0">
                 <h3 class="text-2xl font-bold text-dracula-purple">Vassili Joffroy</h3>
-                <p class="text-dracula-comment mt-2">Entrepreneur & CTO</p>
             </div>
             <!-- Navigation -->
             <ul class="flex flex-wrap justify-center md:justify-start space-x-6">
@@ -12,30 +11,27 @@
                 <li><a href="#projects" class="hover:text-dracula-green transition">Mes projets</a></li>
                 <li><a href="#passions" class="hover:text-dracula-green transition">Passions</a></li>
                 <li><a href="#testimonials" class="hover:text-dracula-green transition">Témoignages</a></li>
-                <li><a href="#calendar" class="hover:text-dracula-green transition">Disponibilités</a></li>
+                <li><a href="#contact" class="hover:text-dracula-green transition">Disponibilités</a></li>
             </ul>
             <!-- Social Links -->
             <div class="flex space-x-6 mt-6 md:mt-0">
-                <a href="https://linkedin.com/in/vassilijoffroy" aria-label="LinkedIn" class="text-dracula-foreground hover:text-dracula-purple">
+                <a href="https://www.linkedin.com/in/vassili-joffroy/" aria-label="LinkedIn"
+                   class="text-dracula-foreground hover:text-dracula-purple">
                     <i class="fab fa-linkedin-in text-2xl"></i>
                 </a>
-                <a href="https://instagram.com/vassilijoffroy" aria-label="Instagram" class="text-dracula-foreground hover:text-dracula-purple">
-                    <i class="fab fa-instagram text-2xl"></i>
-                </a>
-                <a href="https://www.malt.fr/profile/vassilijoffroy" aria-label="Malt" class="text-dracula-foreground hover:text-dracula-purple">
+                <a href="https://www.malt.fr/profile/vassilijoffroy" aria-label="Malt"
+                   class="text-dracula-foreground hover:text-dracula-purple">
                     <i class="fas fa-briefcase text-2xl"></i>
                 </a>
-                <a href="https://www.codeur.com/-vassili" aria-label="Codeur.com" class="text-dracula-foreground hover:text-dracula-purple">
+                <a href="https://www.codeur.com/-vassilij" aria-label="Codeur.com"
+                   class="text-dracula-foreground hover:text-dracula-purple">
                     <i class="fas fa-code text-2xl"></i>
                 </a>
             </div>
         </div>
         <div class="mt-8 border-t border-dracula-comment pt-6 text-center">
-            <p class="text-dracula-comment">&copy; 2024 Vassili Joffroy. Tous droits réservés.</p>
-            <p class="text-dracula-comment mt-2">
-                <a href="#" class="hover:text-dracula-green transition">Mentions Légales</a> |
-                <a href="#" class="hover:text-dracula-green transition">Politique de Confidentialité</a>
-            </p>
+            <a href="https://www.pappers.fr/entreprise/joffroy-vassili-888765740"
+               class="text-white hover:text-dracula-green">&copy; {{ date('Y') }} Vassili IT. Tous droits réservés.</a>
         </div>
     </div>
 </footer>
