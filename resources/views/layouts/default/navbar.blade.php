@@ -15,7 +15,11 @@
     </ul>
     <!-- Mobile Menu Button -->
     <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Toggle menu">
-        <i class="fas fa-bars text-2xl text-dracula-foreground"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-dracula-foreground" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
     </button>
 </nav>
 

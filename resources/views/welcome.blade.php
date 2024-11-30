@@ -5,7 +5,7 @@
     <header id="hero"
             class="relative h-screen flex flex-col justify-center items-center text-center text-dracula-foreground">
         <div class="absolute inset-0 bg-cover bg-center z-0"
-             style="background-image: url({{ asset('hero.jpg') }});"></div>
+             style="background-image: url({{ asset('hero.webp') }});"></div>
         <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
         <div class="relative z-10 px-6">
             <h1 class="text-6xl font-extrabold text-dracula-purple mb-6 leading-tight max-w-4xl mx-auto"

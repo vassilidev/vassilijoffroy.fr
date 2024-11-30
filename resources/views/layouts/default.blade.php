@@ -9,8 +9,15 @@
     <meta name="author" content="Vassili Joffroy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preload" href="{{ asset('hero.webp') }}" as="image">
+    <link rel="preload" href="{{ asset('me.jpeg') }}" as="image">
+    <link rel="preload" href="{{ asset('talk.jpeg') }}" as="image">
+    <link rel="preload" href="{{ asset('travel.jpeg') }}" as="image">
+    <link rel="preload" href="{{ asset('food.jpeg') }}" as="image">
+    <link rel="preload" href="{{ asset('clock.jpeg') }}" as="image">
+    <link rel="preload" href="{{ asset('computer.jpeg') }}" as="image">
+
     @vite('resources/css/app.css')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-dracula-bg text-dracula-foreground font-sans overflow-x-hidden">
 
@@ -19,7 +26,7 @@
 
 <button id="scrollToTop"
         class="hidden fixed bottom-6 right-6 bg-dracula-green text-dracula-bg p-4 rounded-full shadow-lg hover:bg-dracula-green-700 transition duration-300 z-50">
-    <i class="fas fa-chevron-up text-2xl"></i>
+    <img src="{{ asset('chevron-up.svg') }}" alt="Scroll to Top" class="w-6 h-6">
 </button>
 
 @include('layouts.default.navbar')

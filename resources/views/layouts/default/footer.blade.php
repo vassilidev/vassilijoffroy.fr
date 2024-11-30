@@ -17,15 +17,15 @@
             <div class="flex space-x-6 mt-6 md:mt-0">
                 <a href="https://www.linkedin.com/in/vassili-joffroy/" aria-label="LinkedIn"
                    class="text-dracula-foreground hover:text-dracula-purple">
-                    <i class="fab fa-linkedin-in text-2xl"></i>
+                    <img src="{{ asset('linkedin.svg') }}" alt="LinkedIn" class="w-6 h-6">
                 </a>
                 <a href="https://www.malt.fr/profile/vassilijoffroy" aria-label="Malt"
                    class="text-dracula-foreground hover:text-dracula-purple">
-                    <i class="fas fa-briefcase text-2xl"></i>
+                    <img src="{{ asset('briefcase.svg') }}" alt="Malt" class="w-6 h-6">
                 </a>
                 <a href="https://www.codeur.com/-vassilij" aria-label="Codeur.com"
                    class="text-dracula-foreground hover:text-dracula-purple">
-                    <i class="fas fa-code text-2xl"></i>
+                    <img src="{{ asset('code.svg') }}" alt="Codeur.com" class="w-6 h-6">
                 </a>
             </div>
         </div>
