@@ -101,7 +101,7 @@
                 @foreach (config('passions') as $passion)
                     <div class="flex items-center bg-dracula-bg rounded-lg p-6" data-aos="{{ $passion['animation'] }}">
                         <div class="w-1/3">
-                            <img src="{{ $passion['image'] }}" alt="{{ $passion['title'] }}"
+                            <img src="{{ asset($passion['image']) }}" alt="{{ $passion['title'] }}"
                                  class="rounded-full shadow-lg">
                         </div>
                         <div class="w-2/3 pl-6">
