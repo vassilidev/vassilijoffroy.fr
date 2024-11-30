@@ -65,20 +65,24 @@
     <!-- Projects Section -->
     <section id="projects" class="bg-dracula-bg text-dracula-foreground py-24">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-dracula-purple mb-12"
-            >@lang('projects_title')</h2>
+            <h2 class="text-4xl font-bold text-center text-dracula-purple mb-12">
+                @lang('projects_title')
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Dynamic projects from config -->
                 @foreach (config('projects') as $project)
-                    <div class="bg-dracula-current-line p-6 rounded-lg shadow-lg">
+                    <div class="bg-dracula-current-line p-6 rounded-lg shadow-lg relative">
                         <h3 class="text-2xl font-semibold text-dracula-green mb-4">{{ $project['title'] }}</h3>
                         <p>{{ $project['description'] }}</p>
                         @if (!empty($project['url']))
-                            <a href="{{ $project['url'] }}" target="_blank" class="text-dracula-green hover:underline">
+                            <a href="{{ $project['url'] }}"
+                               target="_blank"
+                               class="text-dracula-green hover:underline absolute bottom-2 right-2">
                                 @lang('projects_discover') &rarr;
                             </a>
                         @elseif (!empty($project['status']))
-                            <p class="text-dracula-comment italic">{{ $project['status'] }}</p>
+                            <p class="text-dracula-foreground italic absolute bottom-2 right-2">
+                                {{ $project['status'] }}
+                            </p>
                         @endif
                     </div>
                 @endforeach
@@ -122,7 +126,7 @@
                                  class="w-12 h-12 rounded-full mr-3">
                             <div>
                                 <span class="block font-semibold">{{ $testimonial['name'] }}</span>
-                                <span class="text-sm text-dracula-comment">{{ $testimonial['company'] }}</span>
+                                <span class="text-sm text-dracula-foreground italic">{{ $testimonial['company'] }}</span>
                             </div>
                         </div>
                         <p class="italic">"{{ $testimonial['testimonial'] }}"</p>
