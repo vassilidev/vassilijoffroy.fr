@@ -8,12 +8,10 @@
              style="background-image: url({{ asset('hero.webp') }});"></div>
         <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
         <div class="relative z-10 px-6">
-            <h1 class="text-6xl font-extrabold text-dracula-purple mb-6 leading-tight max-w-4xl mx-auto"
-            >
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-dracula-purple mb-6 leading-snug sm:leading-tight max-w-4xl mx-auto px-4 sm:px-6">
                 @lang('hero_title')
             </h1>
-            <p class="text-xl sm:text-2xl mb-10 max-w-2xl mx-auto leading-relaxed text-dracula-foreground-light"
-            >
+            <p class="text-xl sm:text-2xl mb-10 max-w-2xl mx-auto leading-relaxed text-dracula-foreground-light">
                 @lang('hero_description')
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
