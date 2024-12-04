@@ -30,25 +30,57 @@
     <!-- Clients Section -->
     <section id="clients" class="bg-dracula-bg text-dracula-foreground py-24">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-dracula-purple mb-12"
-            >@lang('clients_title')</h2>
-            <p class="text-center mb-12 text-lg">@lang('clients_subtitle')</p>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
-                <img src="{{ asset('cfdt.png') }}" alt="CFDT" class="h-16 mx-auto">
-                <img src="{{ asset('centrimex.png') }}" alt="Centre Imex" class="h-16 mx-auto">
-                <img src="{{ asset('anj.png') }}" alt="Autorité Nationale des Jeux" class="h-16 mx-auto">
-                <img src="{{ asset('superformaliste.png') }}" alt="SuperFormaliste" class="h-16 mx-auto">
+            <h2 class="text-4xl font-bold text-center text-dracula-purple mb-12">
+                @lang('clients_title')
+            </h2>
+            <p class="text-center mb-12 text-lg">
+                @lang('clients_subtitle')
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center">
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="{{ asset('cfdt.png') }}" alt="CFDT" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="{{ asset('centrimex.png') }}" alt="Centre Imex" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="{{ asset('anj.png') }}" alt="Autorité Nationale des Jeux" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="{{ asset('superformaliste.png') }}" alt="SuperFormaliste" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="https://ml.globenewswire.com/Resource/Download/95587acd-77c4-4f24-8995-1648ac68f422" alt="Globe Newswire" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E22AQGtRQbyeU9mRg/feedshare-shrink_800/feedshare-shrink_800/0/1724766455011?e=2147483647&v=beta&t=CwrW-0aduXyncHv_h4hdCXGi3qvNgOEXWBoQcq3tcbk" alt="LinkedIn Feedshare" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="https://pbs.twimg.com/profile_images/1542842477115326464/a5ZE-CFu_400x400.jpg" alt="Twitter Profile" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="https://icarusmediadigital.com/images/icon.png" alt="Icarus Media Digital" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D12AQFP6rmVlIQyVA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1539274062140?e=1736380800&v=beta&t=i64tQAiM1-1HK6FHFGZH3jNRhAZGrH8aEDi-ghgeLqA" alt="LinkedIn Article" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center items-center p-4 bg-dracula-selection rounded-lg shadow-lg">
+                    <img src="https://play-lh.googleusercontent.com/LqBpDIpmk9uCV_805DEz6yXxiygrLWfajptFq63ZGKineerLGdvPDZJwmAh6TE0Zb-M" alt="Play Store App" class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                </div>
             </div>
         </div>
     </section>
+
+
 
     <section id="about" class="bg-dracula-current-line text-dracula-foreground py-24">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <!-- Image Section -->
                 <div class="flex justify-center">
-                    <img src="{{ asset('me.jpeg') }}" alt="Vassili Joffroy"
-                         class="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGo0FeOMRuXsg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1732530644239?e=1738800000&v=beta&t=iWfT4oUqS70JfxwnsZXjc5aJ0ZEysdsJ9QAsQYIHPxc"
+                         alt="Vassili Joffroy"
+                         class="rounded-full shadow-lg w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 object-cover">
                 </div>
                 <!-- Text Content -->
                 <div>
@@ -59,6 +91,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="bg-dracula-bg text-dracula-foreground py-24">

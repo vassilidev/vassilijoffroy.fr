@@ -16,8 +16,8 @@ return [
         'title'       => 'Site éclair ⚡️',
         'description' => 'La solution parfaite pour les entrepreneurs, TPE et PME qui désirent un site web sur-mesure, ultra-performant et évolutif, livré en seulement 5 jours. Profitez d\'un hébergement et d\'un nom de domaine inclus, ainsi que d\'ajustements illimités après la mise en ligne. ',
         'details'     => [
-            'services'     => 'Création de site web sur mesure, ultra-performant et évolutif',
-            'avantages'    => 'Livraison en 5 jours, hébergement et nom de domaine inclus, ajustements illimités',
+            'services'  => 'Création de site web sur mesure, ultra-performant et évolutif',
+            'avantages' => 'Livraison en 5 jours, hébergement et nom de domaine inclus, ajustements illimités',
         ],
         'url'         => 'https://siteeclair.fr',
     ],
@@ -49,8 +49,7 @@ return [
             'canaux'   => 'E-commerce, vente à distance sur catalogue',
             'passion'  => 'Allier entrepreneuriat et horlogerie',
         ],
-        'url'         => null,
-        'status'      => 'Site en cours de développement',
+        'url'         => 'https://laboitedutemps.com',
     ],
     [
         'title'       => 'Chope Ton Resto! 🍽️',
@@ -60,7 +59,6 @@ return [
             'mission'     => 'Aider les clients à trouver la perle rare',
             'development' => 'En cours',
         ],
-        'url'         => null,
-        'status'      => 'Site en cours de développement',
+        'url'         => 'https://chopetonresto.fr',
     ],
 ];
