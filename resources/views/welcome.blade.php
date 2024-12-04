@@ -7,25 +7,29 @@
         <div class="absolute inset-0 bg-cover bg-center z-0"
              style="background-image: url({{ asset('hero.webp') }});"></div>
         <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
-        <div class="relative z-10 px-6">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-dracula-purple mb-6 leading-snug sm:leading-tight max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="relative z-10 px-6 max-w-screen-lg mx-auto">
+            <!-- Title -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dracula-purple mb-4 leading-tight tracking-tight">
                 @lang('hero_title')
             </h1>
-            <p class="text-xl sm:text-2xl mb-10 max-w-2xl mx-auto leading-relaxed text-dracula-foreground-light">
+            <!-- Description -->
+            <p class="text-lg sm:text-xl md:text-2xl font-light mb-12 max-w-3xl mx-auto leading-relaxed text-dracula-foreground-light">
                 @lang('hero_description')
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <!-- Call-to-Actions -->
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
                 <a href="#contact"
-                   class="bg-dracula-green text-dracula-bg px-8 py-4 rounded-full font-semibold text-lg sm:text-xl hover:bg-dracula-green-700 transition duration-300">
+                   class="bg-dracula-green text-dracula-bg px-8 py-4 rounded-full font-semibold text-lg md:text-xl hover:bg-dracula-green-700 transition duration-300 shadow-lg">
                     @lang('hero_cta')
                 </a>
                 <a href="#about"
-                   class="bg-dracula-bg border-2 border-dracula-green text-dracula-green px-8 py-4 rounded-full font-semibold text-lg sm:text-xl hover:bg-dracula-green hover:text-dracula-bg transition duration-300">
+                   class="bg-dracula-bg border-2 border-dracula-green text-dracula-green px-8 py-4 rounded-full font-semibold text-lg md:text-xl hover:bg-dracula-green hover:text-dracula-bg transition duration-300 shadow-lg">
                     @lang('hero_cta_bis')
                 </a>
             </div>
         </div>
     </header>
+
 
     <!-- Clients Section -->
     <section id="clients" class="bg-dracula-bg text-dracula-foreground py-24">
