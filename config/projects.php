@@ -1,64 +1,40 @@
 <?php
 
-
 return [
     [
         'title'       => 'TFA - The Forge Agency 🚀',
-        'description' => 'En tant que Président, Co-Fondateur et CTO de TFA - The Forge Agency, j\'ai le privilège de diriger une agence de développement web innovante, spécialisée dans les technologies de pointe telles que Laravel, Node.js, Puppeteer et PHP.',
-        'details'     => [
-            'services'     => 'Développement web sur mesure, création de SaaS, conseil en transformation digitale',
-            'technologies' => 'Laravel, Node.js, Puppeteer, PHP',
-            'distinctions' => 'Super Malter 2, expert reconnu dans le domaine',
-        ],
+        'description' => 'Agence spécialisée dans le développement web et la création d’applications sur mesure. Transformez vos idées en succès numériques.',
         'url'         => 'https://the-forge.agency',
+        'image'       => asset('tfa.png')
     ],
     [
         'title'       => 'Site éclair ⚡️',
-        'description' => 'La solution parfaite pour les entrepreneurs, TPE et PME qui désirent un site web sur-mesure, ultra-performant et évolutif, livré en seulement 5 jours. Profitez d\'un hébergement et d\'un nom de domaine inclus, ainsi que d\'ajustements illimités après la mise en ligne. ',
-        'details'     => [
-            'services'  => 'Création de site web sur mesure, ultra-performant et évolutif',
-            'avantages' => 'Livraison en 5 jours, hébergement et nom de domaine inclus, ajustements illimités',
-        ],
+        'description' => 'Solution clé en main pour créer votre site vitrine en 5 jours, avec un prix fixe et tout inclus.',
         'url'         => 'https://siteeclair.fr',
+        'image'       => asset('siteeclair.png'),
     ],
     [
         'title'       => 'Vassili IT 💻',
-        'description' => 'Fondateur et dirigeant de Vassili IT, ma première entreprise individuelle, je mets à profit mon expertise pour offrir des services complets en informatique.',
-        'details'     => [
-            'services'      => 'Réparation informatique, montage PC sur mesure, conseil, installation',
-            'clients'       => 'Particuliers et professionnels',
-            'interventions' => 'Sur site et à distance',
-        ],
+        'description' => 'Service premium de réparation informatique et montage PC à domicile, pour particuliers et professionnels.',
         'url'         => 'https://linktr.ee/vassilidev',
+        'image'       => asset('vassiliit.jpg'),
     ],
     [
         'title'       => 'TaxCut 📈',
-        'description' => 'En tant que CTO et associé de TaxCut, membre de la French Tech, j\'ai rejoint l\'équipe en apportant mon expertise technologique pour révolutionner le domaine de l\'optimisation fiscale.',
-        'details'     => [
-            'services'     => 'Optimisation fiscale, simulations d\'impôts, conseils personnalisés',
-            'role'         => 'Développement d\'applications, coordination de projets, innovation technologique',
-            'distinctions' => 'Membre de la French Tech',
-        ],
+        'description' => 'Réduisez vos impôts simplement en quelques clics, faites votre simulation afin de connaître les solutions qui s\'offrent à vous',
         'url'         => 'https://taxcut.fr',
+        'image'       => asset('taxcut.png'),
     ],
     [
         'title'       => 'La Boîte du Temps ⌚',
-        'description' => 'En tant que Président et Co-Fondateur de La Boîte du Temps, j\'ai concrétisé un projet cher à mon cœur qui combine mes passions pour l\'entrepreneuriat et l\'horlogerie.',
-        'details'     => [
-            'services' => 'Vente et location de produits horlogers et joailliers',
-            'canaux'   => 'E-commerce, vente à distance sur catalogue',
-            'passion'  => 'Allier entrepreneuriat et horlogerie',
-        ],
+        'description' => 'Boutique en ligne dédiée aux montres, textiles et accessoires horlogers. Découvrez des produits uniques.',
         'url'         => 'https://laboitedutemps.com',
+        'image'       => asset('lbdt.png'),
     ],
     [
         'title'       => 'Chope Ton Resto! 🍽️',
-        'description' => 'En tant que Directeur Général, CTO et Co-Fondateur de Chope Ton Resto!, je développe un SaaS innovant aux côtés de mon associé, fort de plus de 10 ans d\'expérience dans la restauration.',
-        'details'     => [
-            'services'    => 'SaaS pour restaurateurs, statistiques, gestion simplifiée',
-            'mission'     => 'Aider les clients à trouver la perle rare',
-            'development' => 'En cours',
-        ],
+        'description' => 'Trouvez les meilleurs restaurants près de chez vous grâce à une recherche intuitive et des avis authentiques.',
         'url'         => 'https://chopetonresto.fr',
+        'image'       => 'https://chopetonresto.fr/assets/img.png',
     ],
 ];

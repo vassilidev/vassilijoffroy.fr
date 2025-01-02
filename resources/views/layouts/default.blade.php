@@ -2,33 +2,56 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Vassili Joffroy - Entrepreneur & CEO et CTO spécialisé en Laravel, SaaS & Scraping</title>
+    <title>Vassili Joffroy - Entrepreneur & Développeur Laravel, SaaS, et Scraping</title>
     <meta name="description"
-          content="Entrepreneur & Développeur web spécialisé en Laravel, SaaS & Scraping. J'aide les entreprises à innover et à se développer dans l'ère numérique.">
-    <meta name="keywords" content="Vassili Joffroy, Développeur web, Laravel, SaaS, Scraping, CTO, Entrepreneur">
+          content="Transformez vos idées en réalités numériques avec Vassili Joffroy. Expert en Laravel, SaaS et Scraping, je crée des solutions digitales sur mesure pour booster vos projets.">
+    <meta name="keywords"
+          content="Vassili Joffroy, Développeur Laravel, SaaS, Scraping, Entrepreneur, CTO, Projets numériques, Transformation digitale">
     <meta name="author" content="Vassili Joffroy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
-    <link rel="preload" href="{{ asset('hero.webp') }}" as="image">
-    <link rel="preload" href="{{ asset('me.jpeg') }}" as="image">
-    <link rel="preload" href="{{ asset('talk.jpeg') }}" as="image">
-    <link rel="preload" href="{{ asset('travel.jpeg') }}" as="image">
-    <link rel="preload" href="{{ asset('food.jpeg') }}" as="image">
-    <link rel="preload" href="{{ asset('clock.jpeg') }}" as="image">
-    <link rel="preload" href="{{ asset('computer.jpeg') }}" as="image">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Vassili Joffroy - Entrepreneur & Développeur Laravel, SaaS, et Scraping">
+    <meta property="og:description"
+          content="Transformez vos idées en réalités numériques avec Vassili Joffroy. Expert en Laravel, SaaS et Scraping, je crée des solutions digitales sur mesure pour booster vos projets.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vassilijoffroy.fr">
+    <meta property="og:image" content="{{ asset('banner.png') }}">
 
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vassili Joffroy - Entrepreneur & Développeur Laravel, SaaS, et Scraping">
+    <meta name="twitter:description"
+          content="Transformez vos idées en réalités numériques avec Vassili Joffroy. Expert en Laravel, SaaS et Scraping, je crée des solutions digitales sur mesure pour booster vos projets.">
+    <meta name="twitter:image" content="{{ asset('banner.png') }}">
 
-    @vite('resources/css/app.css')
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vassilijoffroy.fr">
+
+    <!-- Favicons -->
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-title" content="Vassili Joffroy"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+
+    <!-- CSS and JS -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @stack('css')
 </head>
-<body class="bg-dracula-bg text-dracula-foreground font-sans overflow-x-hidden">
+<body class="bg-dracula-bg text-dracula-foreground mt-6">
 
 <div id="cursor"
      class="hidden md:block fixed top-0 left-0 w-4 h-4 bg-dracula-green rounded-full pointer-events-none z-50"></div>
 
 <button id="scrollToTop"
-        class="hidden fixed bottom-6 right-6 bg-dracula-green text-dracula-bg p-4 rounded-full shadow-lg hover:bg-dracula-green-700 transition duration-300 z-50">
-    <img src="{{ asset('chevron-up.svg') }}" alt="Scroll to Top" class="w-6 h-6">
+        class="hidden fixed bottom-6 right-6 bg-dracula-cyan text-dracula-bg p-4 rounded-full shadow-lg hover:bg-dracula-purple hover:shadow-xl transition-all duration-300 ease-in-out z-50">
+    <img src="{{ asset('chevron-up.svg') }}" alt="Remonter en haut" class="w-6 h-6">
 </button>
 
 @include('layouts.default.navbar')
@@ -39,23 +62,21 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Custom Cursor
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', e => {
-            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        });
-
         // Scroll to Top
         const scrollToTopButton = document.getElementById('scrollToTop');
+
         window.addEventListener('scroll', () => {
             scrollToTopButton.classList.toggle('hidden', window.pageYOffset <= 300);
         });
 
-        // Toggle Mobile Menu
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     });
 </script>
+@stack('js')
 </body>
 </html>

@@ -4,24 +4,11 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-section {
-    padding-top: 4rem; /* Ajustez en fonction de la hauteur de la navbar */
-}
-
-#scrollToTop.hidden {
-    display: none;
-}
-
-/* Cursor */
-#cursor {
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out;
+    scroll-padding-top: 4rem;
 }
 
 /* Selection Color */
 ::selection {
-    background-color: #BD93F9; /* dracula-purple */
-    color: #282A36; /* dracula-bg */
+    background-color: #8BE9FD;
+    color: #282A36;
 }
