@@ -40,30 +40,31 @@
         <div class="container mx-auto px-6">
             <h2 class="text-center text-2xl md:text-3xl font-bold text-dracula-cyan mb-8">Ils m'ont fait confiance</h2>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center">
-                <a href="https://www.cfdt.fr/" rel="nofollow" target="_blank">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
+                <a href="https://www.cfdt.fr/" rel="nofollow" target="_blank" class="flex justify-center">
                     <img src="{{ asset('cfdt.png') }}" alt="CFDT"
                          class="h-12 grayscale hover:grayscale-0 transition duration-300">
                 </a>
-                <a href="https://www.centrimex.com/" rel="nofollow" target="_blank">
+                <a href="https://www.centrimex.com/" rel="nofollow" target="_blank" class="flex justify-center">
                     <img src="{{ asset('centrimex.png') }}" alt="Centrimex"
                          class="h-12 grayscale hover:grayscale-0 transition duration-300">
                 </a>
-                <a href="https://anj.fr/" rel="nofollow" target="_blank">
+                <a href="https://anj.fr/" rel="nofollow" target="_blank" class="flex justify-center">
                     <img src="{{ asset('anj.png') }}" alt="ANJ"
                          class="h-12 grayscale hover:grayscale-0 transition duration-300">
                 </a>
-                <a href="https://www.superformaliste.com/" rel="nofollow" target="_blank">
+                <a href="https://www.superformaliste.com/" rel="nofollow" target="_blank" class="flex justify-center">
                     <img src="{{ asset('superformaliste.png') }}" alt="SuperFormaliste"
                          class="h-12 grayscale hover:grayscale-0 transition duration-300">
                 </a>
-                <a href="https://www.expanamarkets.com/" rel="nofollow" target="_blank">
+                <a href="https://www.expanamarkets.com/" rel="nofollow" target="_blank" class="flex justify-center">
                     <img src="{{ asset('expana.png') }}" alt="Expana Markets"
                          class="h-12 grayscale hover:grayscale-0 transition duration-300">
                 </a>
             </div>
         </div>
     </section>
+
 
     <section id="about" class="py-16 bg-dracula-bg text-dracula-foreground">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
@@ -121,25 +122,24 @@
         </div>
     </section>
 
-    <!-- =========================
-        CONTACT
-    ========================== -->
     <section id="contact" class="py-16 bg-dracula-bg text-dracula-foreground">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-2/3 space-y-6">
-                <h2 class="text-3xl font-bold text-dracula-cyan">Vous souhaitez collaborer ?</h2>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+            <div class="md:w-2/3 space-y-6 text-center md:text-left">
+                <h2 class="text-3xl font-bold text-dracula-cyan">
+                    Vous souhaitez collaborer&nbsp;?
+                </h2>
                 <p class="text-lg">
                     Contactez-moi dès aujourd'hui pour discuter de vos besoins et trouver la solution idéale à vos
-                    projets
-                    numériques. Ensemble, nous pouvons transformer vos idées en réalités.
+                    projets numériques. Ensemble, nous pouvons transformer vos idées en réalités.
                 </p>
             </div>
             <div class="md:w-1/3 text-center">
                 <a href="https://calendly.com/vassili-joffroy/30min" target="_blank"
-                   class="bg-dracula-cyan text-dracula-bg px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-dracula-purple transition duration-300">
+                   class="bg-dracula-cyan text-dracula-bg px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-dracula-purple transition duration-300 inline-block w-full sm:w-auto">
                     Contactez-moi →
                 </a>
             </div>
         </div>
     </section>
+
 @endsection
