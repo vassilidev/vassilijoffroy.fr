@@ -235,7 +235,7 @@
                 <div class="space-y-4">
                     <!-- FAQ Item 1 -->
                     <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" onclick="toggleFAQ(1)">
+                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="1">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
                                     ⏰ Quel est le délai d'intervention pour un dépannage PC à domicile à Suresnes ?
@@ -245,22 +245,24 @@
                                 </svg>
                             </div>
                         </button>
-                        <div id="faq-1" class="faq-content px-8 pb-8">
-                            <div class="text-lg text-gray-700 leading-relaxed">
-                                <p class="mb-4"><strong class="text-primary-green">Intervention le jour même possible dans toute l'Île-de-France !</strong></p>
-                                <ul class="space-y-2 ml-6 mb-4">
-                                    <li>• <strong>Urgences informatiques :</strong> Dans l'heure (24h/7j, même le dimanche)</li>
-                                    <li>• <strong>Dépannage standard :</strong> Sous 24h maximum</li>
-                                    <li>• <strong>Rendez-vous programmés :</strong> Selon vos disponibilités</li>
-                                </ul>
-                                <p>Pour Suresnes et communes limitrophes, je peux souvent intervenir dans les 2-3 heures. <a href="{{ route('contact') }}" class="text-primary-blue hover:underline">Contactez-moi</a> pour connaître ma disponibilité immédiate.</p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out" data-content="1">
+                            <div class="px-8 pb-8">
+                                <div class="text-lg text-gray-700 leading-relaxed">
+                                    <p class="mb-4"><strong class="text-primary-green">Intervention le jour même possible dans toute l'Île-de-France !</strong></p>
+                                    <ul class="space-y-2 ml-6 mb-4">
+                                        <li>• <strong>Urgences informatiques :</strong> Dans l'heure (24h/7j, même le dimanche)</li>
+                                        <li>• <strong>Dépannage standard :</strong> Sous 24h maximum</li>
+                                        <li>• <strong>Rendez-vous programmés :</strong> Selon vos disponibilités</li>
+                                    </ul>
+                                    <p>Pour Suresnes et communes limitrophes, je peux souvent intervenir dans les 2-3 heures. <a href="{{ route('contact') }}" class="text-primary-blue hover:underline">Contactez-moi</a> pour connaître ma disponibilité immédiate.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ Item 2 -->
                     <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" onclick="toggleFAQ(2)">
+                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="2">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
                                     💳 Comment bénéficier du crédit d'impôt sur mes prestations informatiques à domicile ?
@@ -270,22 +272,24 @@
                                 </svg>
                             </div>
                         </button>
-                        <div id="faq-2" class="faq-content px-8 pb-8 hidden">
-                            <div class="text-lg text-gray-700 leading-relaxed">
-                                <p class="mb-4"><strong class="text-primary-green">Crédit d'impôt automatique de 50% grâce à mon agrément Services à la Personne :</strong></p>
-                                <ul class="space-y-2 ml-6 mb-4">
-                                    <li>• <strong>Avance immédiate :</strong> Payez seulement 50% le jour J</li>
-                                    <li>• <strong>Remboursement fiscal :</strong> Jusqu'à 1500€/an remboursés par l'État</li>
-                                    <li>• <strong>Démarches simplifiées :</strong> Je m'occupe de toute la paperasse</li>
-                                </ul>
-                                <p>Exemple concret : intervention à 100€ = vous payez 50€ réels. Tous les services de <a href="{{ route('services') }}" class="text-primary-blue hover:underline">réparation informatique</a> sont éligibles (main-d'œuvre + déplacement).</p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out" data-content="2">
+                            <div class="px-8 pb-8">
+                                <div class="text-lg text-gray-700 leading-relaxed">
+                                    <p class="mb-4"><strong class="text-primary-green">Crédit d'impôt automatique de 50% grâce à mon agrément Services à la Personne :</strong></p>
+                                    <ul class="space-y-2 ml-6 mb-4">
+                                        <li>• <strong>Avance immédiate :</strong> Payez seulement 50% le jour J</li>
+                                        <li>• <strong>Remboursement fiscal :</strong> Jusqu'à 1500€/an remboursés par l'État</li>
+                                        <li>• <strong>Démarches simplifiées :</strong> Je m'occupe de toute la paperasse</li>
+                                    </ul>
+                                    <p>Exemple concret : intervention à 100€ = vous payez 50€ réels. Tous les services de <a href="{{ route('services') }}" class="text-primary-blue hover:underline">réparation informatique</a> sont éligibles (main-d'œuvre + déplacement).</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ Item 3 -->
                     <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" onclick="toggleFAQ(3)">
+                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="3">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
                                     💰 Quels sont les moyens de paiement acceptés pour le dépannage informatique ?
@@ -295,23 +299,25 @@
                                 </svg>
                             </div>
                         </button>
-                        <div id="faq-3" class="faq-content px-8 pb-8 hidden">
-                            <div class="text-lg text-gray-700 leading-relaxed">
-                                <p class="mb-4"><strong class="text-primary-green">Plusieurs options de paiement pour votre confort :</strong></p>
-                                <ul class="space-y-2 ml-6 mb-4">
-                                    <li>• <strong>Espèces :</strong> Paiement direct après intervention</li>
-                                    <li>• <strong>Chèque :</strong> À l'ordre de Vassili JOFFROY</li>
-                                    <li>• <strong>Virement bancaire :</strong> RIB fourni sur demande</li>
-                                    <li>• <strong>Carte bancaire :</strong> Terminal de paiement mobile disponible</li>
-                                </ul>
-                                <p>Paiement toujours après intervention réussie. Pour le crédit d'impôt, je peux encaisser seulement 50% et l'État vous rembourse le reste directement.</p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out" data-content="3">
+                            <div class="px-8 pb-8">
+                                <div class="text-lg text-gray-700 leading-relaxed">
+                                    <p class="mb-4"><strong class="text-primary-green">Plusieurs options de paiement pour votre confort :</strong></p>
+                                    <ul class="space-y-2 ml-6 mb-4">
+                                        <li>• <strong>Espèces :</strong> Paiement direct après intervention</li>
+                                        <li>• <strong>Chèque :</strong> À l'ordre de Vassili JOFFROY</li>
+                                        <li>• <strong>Virement bancaire :</strong> RIB fourni sur demande</li>
+                                        <li>• <strong>Carte bancaire :</strong> Terminal de paiement mobile disponible</li>
+                                    </ul>
+                                    <p>Paiement toujours après intervention réussie. Pour le crédit d'impôt, je peux encaisser seulement 50% et l'État vous rembourse le reste directement.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ Item 4 -->
                     <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" onclick="toggleFAQ(4)">
+                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="4">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
                                     🏆 Quelles garanties offrez-vous sur vos réparations PC et suppression de virus ?
@@ -321,23 +327,25 @@
                                 </svg>
                             </div>
                         </button>
-                        <div id="faq-4" class="faq-content px-8 pb-8 hidden">
-                            <div class="text-lg text-gray-700 leading-relaxed">
-                                <p class="mb-4"><strong class="text-primary-green">Satisfaction garantie à 100% sur tous mes services :</strong></p>
-                                <ul class="space-y-2 ml-6 mb-4">
-                                    <li>• <strong>Réparation réussie</strong> ou remboursement intégral</li>
-                                    <li>• <strong>Diagnostic gratuit</strong> à domicile sans engagement</li>
-                                    <li>• <strong>Garantie 3 mois</strong> sur les réparations effectuées</li>
-                                    <li>• <strong>Support téléphonique gratuit</strong> pendant 1 mois après intervention</li>
-                                </ul>
-                                <p>Si le problème persiste après mon passage, je reviens gratuitement. Transparence totale sur les tarifs avant toute intervention.</p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out" data-content="4">
+                            <div class="px-8 pb-8">
+                                <div class="text-lg text-gray-700 leading-relaxed">
+                                    <p class="mb-4"><strong class="text-primary-green">Satisfaction garantie à 100% sur tous mes services :</strong></p>
+                                    <ul class="space-y-2 ml-6 mb-4">
+                                        <li>• <strong>Réparation réussie</strong> ou remboursement intégral</li>
+                                        <li>• <strong>Diagnostic gratuit</strong> à domicile sans engagement</li>
+                                        <li>• <strong>Garantie 3 mois</strong> sur les réparations effectuées</li>
+                                        <li>• <strong>Support téléphonique gratuit</strong> pendant 1 mois après intervention</li>
+                                    </ul>
+                                    <p>Si le problème persiste après mon passage, je reviens gratuitement. Transparence totale sur les tarifs avant toute intervention.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ Item 5 -->
                     <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" onclick="toggleFAQ(5)">
+                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="5">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
                                     🚗 Comment fonctionnent les frais de déplacement en Île-de-France ?
@@ -347,23 +355,25 @@
                                 </svg>
                             </div>
                         </button>
-                        <div id="faq-5" class="faq-content px-8 pb-8 hidden">
-                            <div class="text-lg text-gray-700 leading-relaxed">
-                                <p class="mb-4"><strong class="text-primary-green">Frais de déplacement transparents et inclus si intervention réussie :</strong></p>
-                                <ul class="space-y-2 ml-6 mb-4">
-                                    <li>• <strong>Suresnes & limitrophes :</strong> GRATUIT (Puteaux, Nanterre, Saint-Cloud...)</li>
-                                    <li>• <strong>Proche de Suresnes :</strong> 10€ (Neuilly, Courbevoie, Garches...)</li>
-                                    <li>• <strong>Reste Île-de-France :</strong> 10-20€ maximum (Paris, Versailles...)</li>
-                                    <li>• <strong>Si réparation effectuée :</strong> Frais inclus dans le prix final</li>
-                                </ul>
-                                <p>Aucun frais caché ! Le déplacement est offert si je résous votre problème informatique. Devis gratuit sur place.</p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out" data-content="5">
+                            <div class="px-8 pb-8">
+                                <div class="text-lg text-gray-700 leading-relaxed">
+                                    <p class="mb-4"><strong class="text-primary-green">Frais de déplacement transparents et inclus si intervention réussie :</strong></p>
+                                    <ul class="space-y-2 ml-6 mb-4">
+                                        <li>• <strong>Suresnes & limitrophes :</strong> GRATUIT (Puteaux, Nanterre, Saint-Cloud...)</li>
+                                        <li>• <strong>Proche de Suresnes :</strong> 10€ (Neuilly, Courbevoie, Garches...)</li>
+                                        <li>• <strong>Reste Île-de-France :</strong> 10-20€ maximum (Paris, Versailles...)</li>
+                                        <li>• <strong>Si réparation effectuée :</strong> Frais inclus dans le prix final</li>
+                                    </ul>
+                                    <p>Aucun frais caché ! Le déplacement est offert si je résous votre problème informatique. Devis gratuit sur place.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ Item 6 -->
                     <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" onclick="toggleFAQ(6)">
+                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="6">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
                                     🔧 Que comprend une intervention de dépannage informatique à domicile ?
@@ -373,25 +383,27 @@
                                 </svg>
                             </div>
                         </button>
-                        <div id="faq-6" class="faq-content px-8 pb-8 hidden">
-                            <div class="text-lg text-gray-700 leading-relaxed">
-                                <p class="mb-4"><strong class="text-primary-green">Service complet de A à Z inclus dans le prix :</strong></p>
-                                <ul class="space-y-2 ml-6 mb-4">
-                                    <li>• <strong>Diagnostic complet</strong> de votre matériel informatique</li>
-                                    <li>• <strong>Explication claire</strong> du problème en langage simple</li>
-                                    <li>• <strong>Réparation</strong> ou remplacement des composants défaillants</li>
-                                    <li>• <strong>Tests de fonctionnement</strong> et optimisation des performances</li>
-                                    <li>• <strong>Formation personnalisée</strong> pour éviter les problèmes futurs</li>
-                                    <li>• <strong>Conseils de sécurité</strong> et recommandations d'usage</li>
-                                </ul>
-                                <p>Que ce soit pour une <a href="{{ route('services') }}" class="text-primary-blue hover:underline">réparation PC</a>, suppression de virus ou montage d'ordinateur, vous bénéficiez d'un accompagnement complet.</p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out" data-content="6">
+                            <div class="px-8 pb-8">
+                                <div class="text-lg text-gray-700 leading-relaxed">
+                                    <p class="mb-4"><strong class="text-primary-green">Service complet de A à Z inclus dans le prix :</strong></p>
+                                    <ul class="space-y-2 ml-6 mb-4">
+                                        <li>• <strong>Diagnostic complet</strong> de votre matériel informatique</li>
+                                        <li>• <strong>Explication claire</strong> du problème en langage simple</li>
+                                        <li>• <strong>Réparation</strong> ou remplacement des composants défaillants</li>
+                                        <li>• <strong>Tests de fonctionnement</strong> et optimisation des performances</li>
+                                        <li>• <strong>Formation personnalisée</strong> pour éviter les problèmes futurs</li>
+                                        <li>• <strong>Conseils de sécurité</strong> et recommandations d'usage</li>
+                                    </ul>
+                                    <p>Que ce soit pour une <a href="{{ route('services') }}" class="text-primary-blue hover:underline">réparation PC</a>, suppression de virus ou montage d'ordinateur, vous bénéficiez d'un accompagnement complet.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ Item 7 -->
                     <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" onclick="toggleFAQ(7)">
+                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="7">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
                                     🕐 Intervenez-vous le weekend et les jours fériés pour les urgences informatiques ?
@@ -401,16 +413,18 @@
                                 </svg>
                             </div>
                         </button>
-                        <div id="faq-7" class="faq-content px-8 pb-8 hidden">
-                            <div class="text-lg text-gray-700 leading-relaxed">
-                                <p class="mb-4"><strong class="text-primary-green">Service d'urgence 24h/7j, même le dimanche et jours fériés :</strong></p>
-                                <ul class="space-y-2 ml-6 mb-4">
-                                    <li>• <strong>Lundi-Vendredi :</strong> 8h-20h (tarif normal)</li>
-                                    <li>• <strong>Weekend :</strong> 9h-18h (tarif normal)</li>
-                                    <li>• <strong>Urgences 24h/7j :</strong> Supplément +20€ la nuit/weekend</li>
-                                    <li>• <strong>Jours fériés :</strong> Intervention possible selon urgence</li>
-                                </ul>
-                                <p>Votre ordinateur ne démarre plus un dimanche ? Virus qui bloque tout un jour férié ? J'interviens rapidement pour les vraies urgences informatiques.</p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out" data-content="7">
+                            <div class="px-8 pb-8">
+                                <div class="text-lg text-gray-700 leading-relaxed">
+                                    <p class="mb-4"><strong class="text-primary-green">Service d'urgence 24h/7j, même le dimanche et jours fériés :</strong></p>
+                                    <ul class="space-y-2 ml-6 mb-4">
+                                        <li>• <strong>Lundi-Vendredi :</strong> 8h-20h (tarif normal)</li>
+                                        <li>• <strong>Weekend :</strong> 9h-18h (tarif normal)</li>
+                                        <li>• <strong>Urgences 24h/7j :</strong> Supplément +20€ la nuit/weekend</li>
+                                        <li>• <strong>Jours fériés :</strong> Intervention possible selon urgence</li>
+                                    </ul>
+                                    <p>Votre ordinateur ne démarre plus un dimanche ? Virus qui bloque tout un jour férié ? J'interviens rapidement pour les vraies urgences informatiques.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -428,28 +442,46 @@
 
     <!-- JavaScript pour l'accordéon FAQ -->
     <script>
-        function toggleFAQ(id) {
-            const content = document.getElementById(`faq-${id}`);
-            const icon = content.previousElementSibling.querySelector('.faq-icon');
-
-            // Toggle le contenu
-            content.classList.toggle('hidden');
-
-            // Rotation de l'icône
-            if (content.classList.contains('hidden')) {
-                icon.style.transform = 'rotate(180deg)';
-            } else {
-                icon.style.transform = 'rotate(0deg)';
-            }
-        }
-
-        // Ouvrir la première FAQ par défaut
         document.addEventListener('DOMContentLoaded', function() {
-            const firstContent = document.getElementById('faq-1');
-            const firstIcon = firstContent.previousElementSibling.querySelector('.faq-icon');
+            // Sélectionner tous les boutons FAQ
+            const faqButtons = document.querySelectorAll('.faq-toggle');
 
-            // La première est déjà visible, on ajuste juste l'icône
-            firstIcon.style.transform = 'rotate(0deg)';
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const faqId = this.getAttribute('data-faq');
+                    const content = document.querySelector(`[data-content="${faqId}"]`);
+                    const icon = this.querySelector('.faq-icon');
+
+                    // Fermer toutes les autres FAQ
+                    faqButtons.forEach(otherButton => {
+                        if (otherButton !== this) {
+                            const otherId = otherButton.getAttribute('data-faq');
+                            const otherContent = document.querySelector(`[data-content="${otherId}"]`);
+                            const otherIcon = otherButton.querySelector('.faq-icon');
+
+                            otherContent.style.maxHeight = '0px';
+                            otherIcon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+
+                    // Toggle la FAQ actuelle
+                    if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.maxHeight = '0px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Ouvrir la première FAQ par défaut
+            const firstContent = document.querySelector('[data-content="1"]');
+            const firstIcon = document.querySelector('[data-faq="1"] .faq-icon');
+            if (firstContent && firstIcon) {
+                firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
+                firstIcon.style.transform = 'rotate(0deg)';
+            }
         });
     </script>
 
