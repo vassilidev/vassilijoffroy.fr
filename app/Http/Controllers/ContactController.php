@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -21,12 +22,7 @@ class ContactController extends Controller
             'urgency'  => 'required|string',
         ]);
 
-        // 2. Envoi du mail à votre email perso
-        Mail::send('emails.contact', ['data' => $data], function($message) use ($data) {
-            $message
-                ->to('vassilidevnet@gmail.com', 'Vassili JOFFROY')
-                ->subject('Nouvelle demande de contact');
-        });
+        Mail::to('vassilidevnet@gmail.com')->send(new Contact($data));
 
         // 3. Redirection avec message de confirmation en session
         return redirect()
