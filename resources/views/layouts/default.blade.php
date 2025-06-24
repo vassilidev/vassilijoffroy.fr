@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDM8KP8ZTH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QDM8KP8ZTH');
+    </script>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description"
           content="@yield('meta_description', 'Réparation informatique à domicile à Suresnes, Hauts-de-Seine et toute l\'Île-de-France. Intervention rapide 24h/7j, prix imbattables. Spécialiste PC, virus, imprimantes. ☎️ 07 60 48 73 34')">
     <meta name="keywords"
-          content="réparation ordinateur, dépannage informatique, Suresnes, Hauts-de-Seine, Île-de-France, virus, PC portable, imprimante, montage PC, crédit impôt">
+          content="réparation ordinateur, dépannage informatique, Suresnes, Hauts-de-Seine, Île-de-France, virus, PC portable, imprimante, montage PC, crédit impôt, formation informatique, développement web">
     <meta name="author" content="Vassili JOFFROY">
     <meta name="robots" content="index, follow">
 
@@ -18,6 +28,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:locale" content="fr_FR">
+    <meta property="og:image"
+          content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pzqJNB3Ubxq9iXh41G5x2Qy6S0abQW.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('og_title', 'Réparation Informatique Suresnes - Vassili JOFFROY')">
+    <meta name="twitter:description"
+          content="@yield('og_description', 'Dépannage informatique à domicile en Île-de-France. Prix imbattables, crédit d\'impôt 50%.')">
 
     <title>@yield('title', 'Réparation Informatique Suresnes - Dépannage PC à Domicile | Prix Imbattables | Vassili JOFFROY')</title>
 
@@ -47,114 +65,224 @@
         }
     </script>
 
-    <!-- JSON-LD Schema -->
+    <!-- Styles pour empêcher le zoom sur mobile -->
+    <style>
+        @media screen and (max-width: 768px) {
+            input, textarea, select {
+                font-size: 16px !important;
+                transform-origin: left top;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Schema Amélioré -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Vassili JOFFROY - Réparation Informatique",
-            "description": "Service de réparation et dépannage informatique à domicile à Suresnes, Hauts-de-Seine et toute l'Île-de-France",
-            "url": "{{ url('/') }}",
-    "telephone": "+33760487334",
-    "email": "contact@vassilijoffroy.fr",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "8 rue du Tertre",
-        "addressLocality": "Suresnes",
-        "postalCode": "92150",
-        "addressCountry": "FR"
-    },
-    "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.8698,
-        "longitude": 2.2284
-    },
-    "openingHours": "Mo-Su 00:00-23:59",
-    "priceRange": "€",
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "50",
-        "bestRating": "5"
-    },
-    "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 48.8698,
-            "longitude": 2.2284
-        },
-        "geoRadius": "50000"
-    },
-    "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Services de réparation informatique",
-        "itemListElement": [
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Réparation PC fixe et portable",
-                    "description": "Dépannage ordinateurs toutes marques, écran noir, lenteur, virus"
+            "@graph": [
+                {
+                    "@type": "LocalBusiness",
+                    "@id": "{{ url('/') }}#business",
+                    "name": "Vassili JOFFROY - Réparation Informatique",
+                    "alternateName": "Expert Informatique Suresnes",
+                    "description": "Service de réparation et dépannage informatique à domicile à Suresnes, Hauts-de-Seine et toute l'Île-de-France. Formation seniors, montage PC, suppression virus, développement web.",
+                    "url": "{{ url('/') }}",
+                    "telephone": "+33760487334",
+                    "email": "contact@vassilijoffroy.fr",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Vassili JOFFROY",
+                        "jobTitle": "Expert Informatique",
+                        "worksFor": {
+                            "@id": "{{ url('/') }}#business"
+                        }
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "8 rue du Tertre",
+                        "addressLocality": "Suresnes",
+                        "postalCode": "92150",
+                        "addressRegion": "Hauts-de-Seine",
+                        "addressCountry": "FR"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 48.8698,
+                        "longitude": 2.2284
+                    },
+                    "openingHours": "Mo-Su 00:00-23:59",
+                    "priceRange": "€€",
+                    "paymentAccepted": "Cash, Check, Bank Transfer, Credit Card",
+                    "currenciesAccepted": "EUR",
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "4.9",
+                        "reviewCount": "60",
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "serviceArea": [
+                        {
+                            "@type": "City",
+                            "name": "Suresnes"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Puteaux"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Nanterre"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Saint-Cloud"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Rueil-Malmaison"
+                        },
+                        {
+                            "@type": "State",
+                            "name": "Île-de-France"
+                        }
+                    ],
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Services de réparation informatique",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Réparation PC fixe et portable",
+                                    "description": "Dépannage ordinateurs toutes marques, écran noir, lenteur, virus, problèmes de démarrage",
+                                    "provider": {
+                                        "@id": "{{ url('/') }}#business"
+                                    }
+                                },
+                                "priceSpecification": {
+                                    "@type": "PriceSpecification",
+                                    "priceCurrency": "EUR",
+                                    "price": "40"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Suppression de virus et malwares",
+                                    "description": "Nettoyage complet, sécurisation, installation antivirus, suppression ransomware",
+                                    "provider": {
+                                        "@id": "{{ url('/') }}#business"
+                                    }
+                                },
+                                "priceSpecification": {
+                                    "@type": "PriceSpecification",
+                                    "priceCurrency": "EUR",
+                                    "price": "60"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Montage d'ordinateurs sur mesure",
+                                    "description": "Assemblage PC bureautique et gaming, conseil composants, installation Windows",
+                                    "provider": {
+                                        "@id": "{{ url('/') }}#business"
+                                    }
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Formation informatique seniors",
+                                    "description": "Cours personnalisés à domicile, internet, emails, réseaux sociaux",
+                                    "provider": {
+                                        "@id": "{{ url('/') }}#business"
+                                    }
+                                },
+                                "priceSpecification": {
+                                    "@type": "PriceSpecification",
+                                    "priceCurrency": "EUR",
+                                    "price": "35"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Développement web et applications",
+                                    "description": "Sites web sur mesure, applications métier, e-commerce, refonte",
+                                    "provider": {
+                                        "@id": "{{ url('/') }}#business"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "sameAs": [
+                        "https://g.co/kgs/sbiL66j",
+                        "https://www.pagesjaunes.fr/pros/60418181"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "{{ url('/') }}#website",
+                    "url": "{{ url('/') }}",
+                    "name": "Vassili JOFFROY - Réparation Informatique Suresnes",
+                    "description": "Site officiel de Vassili JOFFROY, expert en réparation informatique à domicile à Suresnes et Île-de-France",
+                    "publisher": {
+                        "@id": "{{ url('/') }}#business"
+                    },
+                    "potentialAction": [
+                        {
+                            "@type": "SearchAction",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": "{{ url('/') }}?q={search_term_string}"
+                            },
+                            "query-input": "required name=search_term_string"
+                        }
+                    ]
                 }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Suppression de virus et malwares",
-                    "description": "Nettoyage complet, sécurisation, installation antivirus"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Montage d'ordinateurs sur mesure",
-                    "description": "Assemblage PC bureautique et gaming, conseil composants"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Réparation d'imprimantes domestiques",
-                    "description": "Dépannage imprimantes jet d'encre et laser, configuration WiFi"
-                }
-            }
-        ]
-    }
-}
+            ]
+        }
     </script>
 </head>
 <body class="bg-gray-50">
-<!-- Barre de contact supérieure -->
-<div class="bg-primary-dark text-white py-4 shadow-lg">
+<!-- Barre de contact supérieure - Version mobile optimisée -->
+<div class="bg-primary-dark text-white py-2 md:py-4 shadow-lg">
     <div class="container mx-auto px-4">
-        <div class="flex flex-col lg:flex-row justify-between items-center text-sm">
-            <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8 mb-3 lg:mb-0">
-                <a href="mailto:contact@contact@vassilijoffroy.fr"
+        <div class="flex flex-col lg:flex-row justify-between items-center text-xs md:text-sm">
+            <div class="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-8 mb-2 lg:mb-0">
+                <a href="mailto:contact@vassilijoffroy.fr"
                    class="flex items-center hover:text-primary-green transition-colors duration-300 leading-relaxed">
-                    <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-3 h-3 md:w-4 md:h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                     </svg>
-                    contact@vassilijoffroy.fr
+                    <span class="hidden md:inline">contact@vassilijoffroy.fr</span>
+                    <span class="md:hidden">Email</span>
                 </a>
                 <a href="https://g.co/kgs/NHHRgL3" target="_blank"
                    class="flex items-center hover:text-primary-green transition-colors duration-300 leading-relaxed">
-                    <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-3 h-3 md:w-4 md:h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
                               d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                               clip-rule="evenodd"></path>
                     </svg>
-                    8 rue du Tertre, 92150 Suresnes
+                    <span class="hidden md:inline">8 rue du Tertre, 92150 Suresnes</span>
+                    <span class="md:hidden">Suresnes</span>
                 </a>
             </div>
-            <div class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6">
-                <span class="text-primary-green font-bold animate-pulse-slow leading-tight">🟢 OUVERT 24H/7J</span>
+            <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+                <span class="text-primary-green font-bold animate-pulse-slow leading-tight text-xs md:text-sm">🟢 OUVERT 24H/7J</span>
                 <a href="tel:0760487334"
-                   class="bg-primary-green hover:bg-green-400 hover:shadow-lg hover:shadow-green-500/50 px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 animate-glow">
+                   class="bg-primary-green hover:bg-green-400 hover:shadow-lg hover:shadow-green-500/50 px-4 md:px-8 py-2 md:py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 animate-glow text-xs md:text-sm">
                     📞 07 60 48 73 34
                 </a>
             </div>
@@ -165,14 +293,15 @@
 <!-- Navigation principale -->
 <nav class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary-blue">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-6">
+        <div class="flex justify-between items-center py-4 md:py-6">
             <a href="{{ route('home') }}" class="flex items-center hover:opacity-80 transition-opacity duration-300">
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pzqJNB3Ubxq9iXh41G5x2Qy6S0abQW.png"
-                     alt="Vassili JOFFROY - Réparation Informatique" class="h-16 w-16 mr-4 hover:scale-110 transition-transform duration-300">
+                     alt="Vassili JOFFROY - Réparation Informatique"
+                     class="h-12 w-12 md:h-16 md:w-16 mr-3 md:mr-4 hover:scale-110 transition-transform duration-300">
                 <div>
-                    <h1 class="text-2xl font-bold text-primary-dark leading-tight">Vassili JOFFROY</h1>
-                    <p class="text-sm text-primary-blue font-semibold leading-relaxed">Expert Informatique • Prix
-                        Imbattables</p>
+                    <h1 class="text-lg md:text-2xl font-bold text-primary-dark leading-tight">Vassili JOFFROY</h1>
+                    <p class="text-xs md:text-sm text-primary-blue font-semibold leading-relaxed">Expert Informatique •
+                        Prix Imbattables</p>
                 </div>
             </a>
 
@@ -195,7 +324,7 @@
             <!-- Menu mobile button -->
             <button id="mobile-menu-button"
                     class="lg:hidden text-gray-700 hover:text-primary-blue transition-colors duration-300">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -209,22 +338,22 @@
         </div>
 
         <!-- Menu mobile -->
-        <div id="mobile-menu" class="lg:hidden hidden pb-6">
-            <div class="flex flex-col space-y-4">
+        <div id="mobile-menu" class="lg:hidden hidden pb-4 md:pb-6">
+            <div class="flex flex-col space-y-3 md:space-y-4">
                 <a href="{{ route('home') }}"
-                   class="text-gray-700 hover:text-primary-blue font-semibold text-lg transition-colors duration-300 py-2 border-b border-gray-200 leading-tight">
+                   class="text-gray-700 hover:text-primary-blue font-semibold text-base md:text-lg transition-colors duration-300 py-2 border-b border-gray-200 leading-tight">
                     Accueil
                 </a>
                 <a href="{{ route('services') }}"
-                   class="text-gray-700 hover:text-primary-blue font-semibold text-lg transition-colors duration-300 py-2 border-b border-gray-200 leading-tight">
+                   class="text-gray-700 hover:text-primary-blue font-semibold text-base md:text-lg transition-colors duration-300 py-2 border-b border-gray-200 leading-tight">
                     Services
                 </a>
                 <a href="{{ route('contact') }}"
-                   class="text-gray-700 hover:text-primary-blue font-semibold text-lg transition-colors duration-300 py-2 border-b border-gray-200 leading-tight">
+                   class="text-gray-700 hover:text-primary-blue font-semibold text-base md:text-lg transition-colors duration-300 py-2 border-b border-gray-200 leading-tight">
                     Contact
                 </a>
                 <a href="tel:0760487334"
-                   class="bg-gradient-to-r from-primary-blue to-primary-green hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 text-center mt-4 leading-tight">
+                   class="bg-gradient-to-r from-primary-blue to-primary-green hover:from-blue-600 hover:to-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 text-center mt-3 md:mt-4 leading-tight">
                     📞 APPELER MAINTENANT
                 </a>
             </div>
@@ -289,15 +418,15 @@
                     </li>
                     <li class="flex items-center leading-relaxed">
                         <span class="text-primary-green mr-3 flex-shrink-0">✓</span>
-                        Réparation d'imprimantes
+                        Formation informatique
                     </li>
                     <li class="flex items-center leading-relaxed">
                         <span class="text-primary-green mr-3 flex-shrink-0">✓</span>
-                        Dépannage à domicile
+                        Développement web
                     </li>
                     <li class="flex items-center leading-relaxed">
                         <span class="text-primary-green mr-3 flex-shrink-0">✓</span>
-                        Support technique
+                        Support technique 24h/7j
                     </li>
                 </ul>
             </div>
@@ -327,9 +456,29 @@
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-16 pt-10 text-center text-gray-400">
-            <p class="leading-relaxed">&copy; {{ date('Y') }} Vassili JOFFROY - Réparation Informatique. Tous droits
-                réservés. | Agréé Services à la Personne</p>
+        <div class="border-t border-gray-700 mt-16 pt-10">
+            <div class="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left text-gray-400 space-y-4 lg:space-y-0">
+                <div>
+                    <p class="leading-relaxed">&copy; {{ date('Y') }} Vassili JOFFROY - Réparation Informatique. Tous
+                        droits réservés.</p>
+                    <p class="text-sm leading-relaxed">Agréé Services à la Personne • SIRET : [Votre SIRET]</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                    <a href="{{ '' }}"
+                       class="text-primary-green hover:text-green-400 transition-colors duration-300 leading-relaxed">
+                        Conditions Générales d'Utilisation
+                    </a>
+                    <div class="text-center">
+                        <p class="text-xs leading-relaxed">Site créé par</p>
+                        <a href="https://siteeclair.fr/" target="_blank"
+                           class="text-primary-blue hover:text-blue-400 transition-colors duration-300 font-semibold leading-relaxed">
+                            Site Éclair
+                        </a>
+                        <p class="text-xs text-gray-500 leading-relaxed">Un site pro. Une seule offre. Livré en 10
+                            jours.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
