@@ -217,22 +217,22 @@
                     <h3 class="text-3xl font-bold mb-8 leading-tight">Principales villes desservies :</h3>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="space-y-3">
-                            <p className="text-lg leading-relaxed">• Suresnes</p>
-                            <p className="text-lg leading-relaxed">• Puteaux</p>
-                            <p className="text-lg leading-relaxed">• Nanterre</p>
-                            <p className="text-lg leading-relaxed">• Rueil-Malmaison</p>
-                            <p className="text-lg leading-relaxed">• Courbevoie</p>
-                            <p className="text-lg leading-relaxed">• Neuilly-sur-Seine</p>
-                            <p className="text-lg leading-relaxed">• Boulogne-Billancourt</p>
+                            <p class="text-lg leading-relaxed">• Suresnes</p>
+                            <p class="text-lg leading-relaxed">• Puteaux</p>
+                            <p class="text-lg leading-relaxed">• Nanterre</p>
+                            <p class="text-lg leading-relaxed">• Rueil-Malmaison</p>
+                            <p class="text-lg leading-relaxed">• Courbevoie</p>
+                            <p class="text-lg leading-relaxed">• Neuilly-sur-Seine</p>
+                            <p class="text-lg leading-relaxed">• Boulogne-Billancourt</p>
                         </div>
                         <div class="space-y-3">
-                            <p className="text-lg leading-relaxed">• Issy-les-Moulineaux</p>
-                            <p className="text-lg leading-relaxed">• Levallois-Perret</p>
-                            <p className="text-lg leading-relaxed">• Clichy</p>
-                            <p className="text-lg leading-relaxed">• Asnières-sur-Seine</p>
-                            <p className="text-lg leading-relaxed">• Paris (tous arrondissements)</p>
-                            <p className="text-lg leading-relaxed">• Versailles</p>
-                            <p className="text-lg leading-relaxed">• <strong>Et tout le 92, 75, 78, 91, 93, 94,
+                            <p class="text-lg leading-relaxed">• Issy-les-Moulineaux</p>
+                            <p class="text-lg leading-relaxed">• Levallois-Perret</p>
+                            <p class="text-lg leading-relaxed">• Clichy</p>
+                            <p class="text-lg leading-relaxed">• Asnières-sur-Seine</p>
+                            <p class="text-lg leading-relaxed">• Paris (tous arrondissements)</p>
+                            <p class="text-lg leading-relaxed">• Versailles</p>
+                            <p class="text-lg leading-relaxed">• <strong>Et tout le 92, 75, 78, 91, 93, 94,
                                     95...</strong></p>
                         </div>
                     </div>
@@ -242,23 +242,23 @@
                     <h3 class="text-2xl font-bold mb-8 leading-tight">💰 Frais de déplacement :</h3>
                     <div class="space-y-6">
                         <div class="flex justify-between items-center py-4 border-b border-white/20">
-                            <span className="text-lg leading-relaxed">Suresnes et communes limitrophes</span>
+                            <span class="text-lg leading-relaxed">Suresnes et communes limitrophes</span>
                             <span class="font-bold text-primary-green text-2xl">GRATUIT</span>
                         </div>
                         <div class="flex justify-between items-center py-4 border-b border-white/20">
-                            <span className="text-lg leading-relaxed">Hauts-de-Seine (92)</span>
+                            <span class="text-lg leading-relaxed">Hauts-de-Seine (92)</span>
                             <span class="font-bold text-xl">10€</span>
                         </div>
                         <div class="flex justify-between items-center py-4 border-b border-white/20">
-                            <span className="text-lg leading-relaxed">Paris et proche banlieue</span>
+                            <span class="text-lg leading-relaxed">Paris et proche banlieue</span>
                             <span class="font-bold text-xl">15€</span>
                         </div>
                         <div class="flex justify-between items-center py-4 border-b border-white/20">
-                            <span className="text-lg leading-relaxed">Reste Île-de-France</span>
+                            <span class="text-lg leading-relaxed">Reste Île-de-France</span>
                             <span class="font-bold text-xl">20€</span>
                         </div>
                         <div class="flex justify-between items-center py-4">
-                            <span className="text-lg leading-relaxed">Urgence nuit/weekend</span>
+                            <span class="text-lg leading-relaxed">Urgence nuit/weekend</span>
                             <span class="font-bold text-xl">+20€</span>
                         </div>
                     </div>

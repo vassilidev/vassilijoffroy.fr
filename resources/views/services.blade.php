@@ -33,13 +33,13 @@
                 <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-red-500">
                     <h3 class="text-xl font-bold text-red-700 mb-4 leading-tight">💻 Problèmes PC</h3>
                     <ul class="space-y-2 text-gray-700">
-                        <li className="leading-relaxed">• Ordinateur lent</li>
-                        <li className="leading-relaxed">• Écran bleu (BSOD)</li>
-                        <li className="leading-relaxed">• PC qui ne démarre pas</li>
-                        <li className="leading-relaxed">• Ordinateur qui freeze</li>
-                        <li className="leading-relaxed">• Bruits anormaux</li>
-                        <li className="leading-relaxed">• Surchauffe</li>
-                        <li className="leading-relaxed">• Écran noir</li>
+                        <li class="leading-relaxed">• Ordinateur lent</li>
+                        <li class="leading-relaxed">• Écran bleu (BSOD)</li>
+                        <li class="leading-relaxed">• PC qui ne démarre pas</li>
+                        <li class="leading-relaxed">• Ordinateur qui freeze</li>
+                        <li class="leading-relaxed">• Bruits anormaux</li>
+                        <li class="leading-relaxed">• Surchauffe</li>
+                        <li class="leading-relaxed">• Écran noir</li>
                     </ul>
                 </div>
 
@@ -47,13 +47,13 @@
                 <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-orange-500">
                     <h3 class="text-xl font-bold text-orange-700 mb-4 leading-tight">🦠 Signes de Virus</h3>
                     <ul class="space-y-2 text-gray-700">
-                        <li className="leading-relaxed">• Pop-ups publicitaires</li>
-                        <li className="leading-relaxed">• Page d'accueil modifiée</li>
-                        <li className="leading-relaxed">• Programmes qui se lancent seuls</li>
-                        <li className="leading-relaxed">• Fichiers cryptés/bloqués</li>
-                        <li className="leading-relaxed">• Antivirus désactivé</li>
-                        <li className="leading-relaxed">• Connexion internet lente</li>
-                        <li className="leading-relaxed">• Messages d'erreur suspects</li>
+                        <li class="leading-relaxed">• Pop-ups publicitaires</li>
+                        <li class="leading-relaxed">• Page d'accueil modifiée</li>
+                        <li class="leading-relaxed">• Programmes qui se lancent seuls</li>
+                        <li class="leading-relaxed">• Fichiers cryptés/bloqués</li>
+                        <li class="leading-relaxed">• Antivirus désactivé</li>
+                        <li class="leading-relaxed">• Connexion internet lente</li>
+                        <li class="leading-relaxed">• Messages d'erreur suspects</li>
                     </ul>
                 </div>
 
@@ -61,13 +61,13 @@
                 <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-purple-500">
                     <h3 class="text-xl font-bold text-purple-700 mb-4 leading-tight">🖨️ Problèmes Imprimante</h3>
                     <ul class="space-y-2 text-gray-700">
-                        <li className="leading-relaxed">• Imprimante non reconnue</li>
-                        <li className="leading-relaxed">• Bourrage papier récurrent</li>
-                        <li className="leading-relaxed">• Qualité d'impression dégradée</li>
-                        <li className="leading-relaxed">• Cartouches non reconnues</li>
-                        <li className="leading-relaxed">• Impression WiFi impossible</li>
-                        <li className="leading-relaxed">• Pilotes manquants</li>
-                        <li className="leading-relaxed">• Erreurs de communication</li>
+                        <li class="leading-relaxed">• Imprimante non reconnue</li>
+                        <li class="leading-relaxed">• Bourrage papier récurrent</li>
+                        <li class="leading-relaxed">• Qualité d'impression dégradée</li>
+                        <li class="leading-relaxed">• Cartouches non reconnues</li>
+                        <li class="leading-relaxed">• Impression WiFi impossible</li>
+                        <li class="leading-relaxed">• Pilotes manquants</li>
+                        <li class="leading-relaxed">• Erreurs de communication</li>
                     </ul>
                 </div>
 
@@ -75,13 +75,13 @@
                 <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-blue-500">
                     <h3 class="text-xl font-bold text-blue-700 mb-4 leading-tight">🌐 Problèmes Réseau</h3>
                     <ul class="space-y-2 text-gray-700">
-                        <li className="leading-relaxed">• Pas de connexion internet</li>
-                        <li className="leading-relaxed">• WiFi qui se déconnecte</li>
-                        <li className="leading-relaxed">• Connexion très lente</li>
-                        <li className="leading-relaxed">• Impossible de se connecter</li>
-                        <li className="leading-relaxed">• Partage de fichiers impossible</li>
-                        <li className="leading-relaxed">• Box internet défaillante</li>
-                        <li className="leading-relaxed">• Configuration réseau</li>
+                        <li class="leading-relaxed">• Pas de connexion internet</li>
+                        <li class="leading-relaxed">• WiFi qui se déconnecte</li>
+                        <li class="leading-relaxed">• Connexion très lente</li>
+                        <li class="leading-relaxed">• Impossible de se connecter</li>
+                        <li class="leading-relaxed">• Partage de fichiers impossible</li>
+                        <li class="leading-relaxed">• Box internet défaillante</li>
+                        <li class="leading-relaxed">• Configuration réseau</li>
                     </ul>
                 </div>
             </div>
@@ -113,19 +113,19 @@
                             💻 RÉPARATION D'ORDINATEURS
                         </h2>
                         <div class="space-y-6 text-lg text-gray-700">
-                            <p className="leading-relaxed"><strong>PC Fixe et Portable - Toutes marques :</strong></p>
+                            <p class="leading-relaxed"><strong>PC Fixe et Portable - Toutes marques :</strong></p>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <ul class="space-y-3">
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Écran noir ou bleu</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Ordinateur lent</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Problèmes de démarrage</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Surchauffe</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Écran noir ou bleu</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Ordinateur lent</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Problèmes de démarrage</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Surchauffe</li>
                                 </ul>
                                 <ul class="space-y-3">
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Bruits anormaux</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Remplacement composants</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Mise à jour système</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Récupération de données</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Bruits anormaux</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Remplacement composants</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Mise à jour système</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Récupération de données</li>
                                 </ul>
                             </div>
                             <p class="text-primary-green font-semibold text-xl leading-relaxed">
@@ -142,19 +142,19 @@
                         <h3 class="text-2xl font-bold text-primary-dark mb-6 leading-tight">💰 Tarifs Transparents</h3>
                         <div class="space-y-4">
                             <div class="flex justify-between items-center py-3 border-b border-gray-200">
-                                <span className="leading-relaxed">Diagnostic à domicile</span>
+                                <span class="leading-relaxed">Diagnostic à domicile</span>
                                 <span class="font-bold text-primary-green text-xl">GRATUIT</span>
                             </div>
                             <div class="flex justify-between items-center py-3 border-b border-gray-200">
-                                <span className="leading-relaxed">Réparation simple</span>
+                                <span class="leading-relaxed">Réparation simple</span>
                                 <span class="font-bold text-lg">À partir de 40€</span>
                             </div>
                             <div class="flex justify-between items-center py-3 border-b border-gray-200">
-                                <span className="leading-relaxed">Nettoyage complet</span>
+                                <span class="leading-relaxed">Nettoyage complet</span>
                                 <span class="font-bold text-lg">60€</span>
                             </div>
                             <div class="flex justify-between items-center py-3">
-                                <span className="leading-relaxed">Remplacement composant</span>
+                                <span class="leading-relaxed">Remplacement composant</span>
                                 <span class="font-bold text-lg">Sur devis</span>
                             </div>
                         </div>
@@ -175,16 +175,16 @@
                             <h3 class="text-2xl font-bold text-red-800 mb-6 leading-tight">⚠️ Signes d'infection</h3>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <ul class="space-y-3 text-red-700">
-                                    <li className="leading-relaxed">• Ordinateur très lent</li>
-                                    <li className="leading-relaxed">• Pop-ups publicitaires</li>
-                                    <li className="leading-relaxed">• Page d'accueil modifiée</li>
-                                    <li className="leading-relaxed">• Fichiers cryptés/bloqués</li>
+                                    <li class="leading-relaxed">• Ordinateur très lent</li>
+                                    <li class="leading-relaxed">• Pop-ups publicitaires</li>
+                                    <li class="leading-relaxed">• Page d'accueil modifiée</li>
+                                    <li class="leading-relaxed">• Fichiers cryptés/bloqués</li>
                                 </ul>
                                 <ul class="space-y-3 text-red-700">
-                                    <li className="leading-relaxed">• Programmes qui se lancent seuls</li>
-                                    <li className="leading-relaxed">• Antivirus désactivé</li>
-                                    <li className="leading-relaxed">• Messages d'erreur suspects</li>
-                                    <li className="leading-relaxed">• Connexion internet lente</li>
+                                    <li class="leading-relaxed">• Programmes qui se lancent seuls</li>
+                                    <li class="leading-relaxed">• Antivirus désactivé</li>
+                                    <li class="leading-relaxed">• Messages d'erreur suspects</li>
+                                    <li class="leading-relaxed">• Connexion internet lente</li>
                                 </ul>
                             </div>
                             <div class="mt-6 p-4 bg-red-200 rounded-xl">
@@ -199,14 +199,14 @@
                             🦠 SUPPRESSION DE VIRUS
                         </h2>
                         <div class="space-y-6 text-lg text-gray-700">
-                            <p className="leading-relaxed"><strong>Nettoyage complet et sécurisation :</strong></p>
+                            <p class="leading-relaxed"><strong>Nettoyage complet et sécurisation :</strong></p>
                             <ul class="space-y-3">
-                                <li className="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Suppression virus, malwares, spywares</li>
-                                <li className="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Nettoyage registre Windows</li>
-                                <li className="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Installation antivirus performant</li>
-                                <li className="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Sécurisation du système</li>
-                                <li className="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Formation prévention</li>
-                                <li className="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Sauvegarde des données</li>
+                                <li class="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Suppression virus, malwares, spywares</li>
+                                <li class="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Nettoyage registre Windows</li>
+                                <li class="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Installation antivirus performant</li>
+                                <li class="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Sécurisation du système</li>
+                                <li class="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Formation prévention</li>
+                                <li class="flex items-center leading-relaxed"><span class="text-red-500 mr-2">✓</span> Sauvegarde des données</li>
                             </ul>
                             <p class="text-red-600 font-semibold text-xl leading-relaxed">
                                 🏆 Résultat garanti ou remboursé !
@@ -229,17 +229,17 @@
                             🔧 MONTAGE D'ORDINATEURS
                         </h2>
                         <div class="space-y-6 text-lg text-gray-700">
-                            <p className="leading-relaxed"><strong>PC sur mesure - Du bureautique au gaming :</strong></p>
+                            <p class="leading-relaxed"><strong>PC sur mesure - Du bureautique au gaming :</strong></p>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <ul class="space-y-3">
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Conseil sur les composants</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Assemblage professionnel</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Installation Windows</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Conseil sur les composants</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Assemblage professionnel</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Installation Windows</li>
                                 </ul>
                                 <ul class="space-y-3">
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Configuration complète</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Tests de performance</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Garantie montage</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Configuration complète</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Tests de performance</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-primary-green mr-2">✓</span> Garantie montage</li>
                                 </ul>
                             </div>
                             <p class="text-primary-green font-semibold text-xl leading-relaxed">
@@ -257,23 +257,23 @@
                         <div class="space-y-4">
                             <div class="flex items-center space-x-4">
                                 <span class="text-primary-green text-2xl">✓</span>
-                                <span className="text-lg leading-relaxed">Meilleur rapport qualité/prix</span>
+                                <span class="text-lg leading-relaxed">Meilleur rapport qualité/prix</span>
                             </div>
                             <div class="flex items-center space-x-4">
                                 <span class="text-primary-green text-2xl">✓</span>
-                                <span className="text-lg leading-relaxed">Composants de qualité choisis</span>
+                                <span class="text-lg leading-relaxed">Composants de qualité choisis</span>
                             </div>
                             <div class="flex items-center space-x-4">
                                 <span class="text-primary-green text-2xl">✓</span>
-                                <span className="text-lg leading-relaxed">Évolutivité garantie</span>
+                                <span class="text-lg leading-relaxed">Évolutivité garantie</span>
                             </div>
                             <div class="flex items-center space-x-4">
                                 <span class="text-primary-green text-2xl">✓</span>
-                                <span className="text-lg leading-relaxed">Pas de logiciels inutiles</span>
+                                <span class="text-lg leading-relaxed">Pas de logiciels inutiles</span>
                             </div>
                             <div class="flex items-center space-x-4">
                                 <span class="text-primary-green text-2xl">✓</span>
-                                <span className="text-lg leading-relaxed">Garantie constructeur sur chaque pièce</span>
+                                <span class="text-lg leading-relaxed">Garantie constructeur sur chaque pièce</span>
                             </div>
                         </div>
                     </div>
@@ -289,19 +289,19 @@
                             <div class="space-y-4">
                                 <div class="flex items-center space-x-3">
                                     <span class="text-purple-600">•</span>
-                                    <span className="text-purple-700 leading-relaxed">Jet d'encre (Canon, HP, Epson...)</span>
+                                    <span class="text-purple-700 leading-relaxed">Jet d'encre (Canon, HP, Epson...)</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <span class="text-purple-600">•</span>
-                                    <span className="text-purple-700 leading-relaxed">Laser (Brother, Samsung...)</span>
+                                    <span class="text-purple-700 leading-relaxed">Laser (Brother, Samsung...)</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <span class="text-purple-600">•</span>
-                                    <span className="text-purple-700 leading-relaxed">Multifonctions (impression + scan)</span>
+                                    <span class="text-purple-700 leading-relaxed">Multifonctions (impression + scan)</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <span class="text-purple-600">•</span>
-                                    <span className="text-purple-700 leading-relaxed">Imprimantes photo</span>
+                                    <span class="text-purple-700 leading-relaxed">Imprimantes photo</span>
                                 </div>
                             </div>
                             <div class="mt-6 p-4 bg-purple-200 rounded-xl">
@@ -316,17 +316,17 @@
                             🖨️ RÉPARATION IMPRIMANTES
                         </h2>
                         <div class="space-y-6 text-lg text-gray-700">
-                            <p className="leading-relaxed"><strong>Problèmes courants résolus :</strong></p>
+                            <p class="leading-relaxed"><strong>Problèmes courants résolus :</strong></p>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <ul class="space-y-3">
-                                    <li className="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Imprimante non reconnue</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Bourrage papier récurrent</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Qualité d'impression dégradée</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Imprimante non reconnue</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Bourrage papier récurrent</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Qualité d'impression dégradée</li>
                                 </ul>
                                 <ul class="space-y-3">
-                                    <li className="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Problèmes de cartouches</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Installation pilotes</li>
-                                    <li className="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Configuration WiFi</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Problèmes de cartouches</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Installation pilotes</li>
+                                    <li class="flex items-center leading-relaxed"><span class="text-purple-500 mr-2">✓</span> Configuration WiFi</li>
                                 </ul>
                             </div>
                         </div>
