@@ -434,17 +434,14 @@
                 <div>
                     <p class="leading-relaxed">&copy; {{ date('Y') }} Vassili JOFFROY - Réparation Informatique. Tous
                         droits réservés.</p>
-                    <p class="text-sm leading-relaxed">Agréé Services à la Personne • SIRET : [Votre SIRET]</p>
+                    <a class="text-sm leading-relaxed" href="https://www.pappers.fr/entreprise/joffroy-vassili-888765740" target="_blank">Agréé Services à la Personne • SIRET : 88876574000020</a><br>
+                    <a href="{{ route('cgu') }}" class="text-sm leading-relaxed text-primary-green hover:text-green-400 transition-colors duration-300">CGU</a>
                 </div>
                 <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
-                    <a href="{{ '' }}"
-                       class="text-primary-green hover:text-green-400 transition-colors duration-300 leading-relaxed">
-                        Conditions Générales d'Utilisation
-                    </a>
                     <div class="text-center">
                         <p class="text-xs leading-relaxed">Site créé par</p>
                         <a href="https://siteeclair.fr/" target="_blank"
-                           class="text-primary-blue hover:text-blue-400 transition-colors duration-300 font-semibold leading-relaxed">
+                           class=" text-yellow-400 ltransition-colors duration-300 font-semibold leading-relaxed">
                             Site Éclair
                         </a>
                         <p class="text-xs text-gray-500 leading-relaxed">Un site pro. Une seule offre. Livré en 10

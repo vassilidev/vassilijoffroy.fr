@@ -119,58 +119,135 @@
                 <!-- Formulaire de contact -->
                 <div>
                     <h2 class="text-4xl font-bold text-primary-dark mb-12 leading-tight">DEMANDE D'INTERVENTION</h2>
+                    @if(session('success'))
+                        <div class="bg-green-100 text-green-800 p-4 rounded mb-6">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 
                     <div class="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100">
-                        <form action="{{ '' }}" method="POST">
+                        <form action="{{ route('contact.send') }}" method="POST" novalidate>
                             @csrf
-                            <div class="space-y-8">
-                                <div>
-                                    <label for="name" class="block text-lg font-semibold text-gray-700 mb-3">Nom et Prénom *</label>
-                                    <input type="text" id="name" name="name" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent text-lg transition-all duration-300" placeholder="Votre nom complet">
-                                </div>
 
-                                <div>
-                                    <label for="phone" class="block text-lg font-semibold text-gray-700 mb-3">Téléphone *</label>
-                                    <input type="tel" id="phone" name="phone" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent text-lg transition-all duration-300" placeholder="07 XX XX XX XX">
-                                </div>
-
-                                <div>
-                                    <label for="city" class="block text-lg font-semibold text-gray-700 mb-3">Ville *</label>
-                                    <input type="text" id="city" name="city" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent text-lg transition-all duration-300" placeholder="Suresnes, Puteaux, Paris...">
-                                </div>
-
-                                <div>
-                                    <label for="service" class="block text-lg font-semibold text-gray-700 mb-3">Type de service</label>
-                                    <select id="service" name="service" class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent text-lg transition-all duration-300">
-                                        <option value="">Sélectionnez un service</option>
-                                        <option value="reparation-pc">Réparation PC fixe/portable</option>
-                                        <option value="suppression-virus">Suppression virus/malware</option>
-                                        <option value="montage-pc">Montage PC sur mesure</option>
-                                        <option value="formation">Formation informatique</option>
-                                        <option value="support">Support technique</option>
-                                        <option value="developpement-web">Développement web</option>
-                                        <option value="autre">Autre problème</option>
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label for="problem" class="block text-lg font-semibold text-gray-700 mb-3">Décrivez votre problème *</label>
-                                    <textarea id="problem" name="problem" rows="5" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent text-lg transition-all duration-300 resize-none" placeholder="Ex: Mon ordinateur ne démarre plus depuis ce matin, écran bleu avec message d'erreur, virus détecté par l'antivirus..."></textarea>
-                                </div>
-
-                                <div>
-                                    <label for="urgency" class="block text-lg font-semibold text-gray-700 mb-3">Niveau d'urgence</label>
-                                    <select id="urgency" name="urgency" class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent text-lg transition-all duration-300">
-                                        <option value="normal">Normal (sous 24h)</option>
-                                        <option value="urgent">Urgent (dans la journée)</option>
-                                        <option value="emergency">Très urgent (dans l'heure)</option>
-                                    </select>
-                                </div>
-
-                                <button type="submit" class="w-full bg-gradient-to-r from-primary-green to-green-600 hover:from-green-600 hover:to-green-700 hover:shadow-lg hover:shadow-green-500/50 text-white py-6 px-8 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105">
-                                    📧 ENVOYER MA DEMANDE
-                                </button>
+                            {{-- Nom et Prénom --}}
+                            <div class="mb-6">
+                                <label for="name" class="block text-lg font-semibold text-gray-700 mb-2">Nom et Prénom *</label>
+                                <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value="{{ old('name') }}"
+                                        required
+                                        class="w-full px-6 py-4 border-2 rounded-xl text-lg transition-all duration-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent
+                @error('name') border-red-500 focus:ring-red-300 @else border-gray-300 @enderror"
+                                        placeholder="Votre nom complet"
+                                >
+                                @error('name')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                @enderror
                             </div>
+
+                            {{-- Téléphone --}}
+                            <div class="mb-6">
+                                <label for="phone" class="block text-lg font-semibold text-gray-700 mb-2">Téléphone *</label>
+                                <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        value="{{ old('phone') }}"
+                                        required
+                                        class="w-full px-6 py-4 border-2 rounded-xl text-lg transition-all duration-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent
+                @error('phone') border-red-500 focus:ring-red-300 @else border-gray-300 @enderror"
+                                        placeholder="07 XX XX XX XX"
+                                >
+                                @error('phone')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            {{-- Ville --}}
+                            <div class="mb-6">
+                                <label for="city" class="block text-lg font-semibold text-gray-700 mb-2">Ville *</label>
+                                <input
+                                        type="text"
+                                        id="city"
+                                        name="city"
+                                        value="{{ old('city') }}"
+                                        required
+                                        class="w-full px-6 py-4 border-2 rounded-xl text-lg transition-all duration-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent
+                @error('city') border-red-500 focus:ring-red-300 @else border-gray-300 @enderror"
+                                        placeholder="Suresnes, Puteaux, Paris..."
+                                >
+                                @error('city')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            {{-- Type de service --}}
+                            <div class="mb-6">
+                                <label for="service" class="block text-lg font-semibold text-gray-700 mb-2">Type de service</label>
+                                <select
+                                        id="service"
+                                        name="service"
+                                        class="w-full px-6 py-4 border-2 rounded-xl text-lg transition-all duration-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent
+                @error('service') border-red-500 focus:ring-red-300 @else border-gray-300 @enderror"
+                                >
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="reparation-pc" {{ old('service')=='reparation-pc' ? 'selected' : '' }}>Réparation PC fixe/portable</option>
+                                    <option value="suppression-virus" {{ old('service')=='suppression-virus' ? 'selected' : '' }}>Suppression virus/malware</option>
+                                    <option value="montage-pc" {{ old('service')=='montage-pc' ? 'selected' : '' }}>Montage PC sur mesure</option>
+                                    <option value="formation" {{ old('service')=='formation' ? 'selected' : '' }}>Formation informatique</option>
+                                    <option value="support" {{ old('service')=='support' ? 'selected' : '' }}>Support technique</option>
+                                    <option value="developpement-web" {{ old('service')=='developpement-web' ? 'selected' : '' }}>Développement web</option>
+                                    <option value="autre" {{ old('service')=='autre' ? 'selected' : '' }}>Autre problème</option>
+                                </select>
+                                @error('service')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            {{-- Description du problème --}}
+                            <div class="mb-6">
+                                <label for="problem" class="block text-lg font-semibold text-gray-700 mb-2">Décrivez votre problème *</label>
+                                <textarea
+                                        id="problem"
+                                        name="problem"
+                                        rows="5"
+                                        required
+                                        class="w-full px-6 py-4 border-2 rounded-xl text-lg transition-all duration-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent resize-none
+                @error('problem') border-red-500 focus:ring-red-300 @else border-gray-300 @enderror"
+                                        placeholder="Ex: Mon ordinateur ne démarre plus..."
+                                >{{ old('problem') }}</textarea>
+                                @error('problem')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            {{-- Niveau d'urgence --}}
+                            <div class="mb-8">
+                                <label for="urgency" class="block text-lg font-semibold text-gray-700 mb-2">Niveau d'urgence</label>
+                                <select
+                                        id="urgency"
+                                        name="urgency"
+                                        class="w-full px-6 py-4 border-2 rounded-xl text-lg transition-all duration-300 focus:ring-2 focus:ring-primary-blue focus:border-transparent
+                @error('urgency') border-red-500 focus:ring-red-300 @else border-gray-300 @enderror"
+                                >
+                                    <option value="normal"  {{ old('urgency')=='normal'  ? 'selected' : '' }}>Normal (sous 24h)</option>
+                                    <option value="urgent"  {{ old('urgency')=='urgent'  ? 'selected' : '' }}>Urgent (dans la journée)</option>
+                                    <option value="emergency" {{ old('urgency')=='emergency' ? 'selected' : '' }}>Très urgent (dans l'heure)</option>
+                                </select>
+                                @error('urgency')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            {{-- Bouton d'envoi --}}
+                            <button
+                                    type="submit"
+                                    class="w-full bg-gradient-to-r from-primary-green to-green-600 hover:from-green-600 hover:to-green-700 text-white py-6 px-8 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105"
+                            >
+                                📧 ENVOYER MA DEMANDE
+                            </button>
                         </form>
 
                         <div class="mt-8 p-6 bg-yellow-50 border-2 border-yellow-200 rounded-xl">
