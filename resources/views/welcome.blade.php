@@ -8,7 +8,7 @@
     <section class="bg-gradient-to-br from-primary-dark via-primary-blue to-primary-green text-white py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            <h1 class="text-5xl md:text-5xl font-bold mb-8 leading-tight">
                 PROBLÈMES INFORMATIQUE ?<br>
                 <span class="text-primary-green animate-pulse">J'ARRIVE !</span>
             </h1>
@@ -125,7 +125,7 @@
                 <div class="grid lg:grid-cols-3 gap-12 items-center">
                     <div class="lg:col-span-1 text-center">
                         <div class="relative inline-block mb-8">
-                            <img src="{{ asset('me.jpeg') }}" alt="Vassili JOFFROY - Expert Informatique" class="w-64 h-64 rounded-2xl shadow-2xl mx-auto object-cover">
+                            <img src="{{ asset('me.jpeg') }}" alt="Vassili JOFFROY - Expert Informatique" class="w-64 h-64 rounded-2xl shadow-2xl mx-auto object-cover" loading="lazy">
                         </div>
                         <h3 class="text-2xl font-bold text-primary-dark mb-2 leading-tight">Vassili JOFFROY</h3>
                         <p class="text-lg text-primary-blue font-semibold">Expert Informatique • 23 ans</p>
@@ -187,7 +187,7 @@
             <div class="max-w-5xl mx-auto text-center">
                 <div class="bg-white p-12 rounded-3xl shadow-2xl border-4 border-primary-green">
                     <div class="flex items-center justify-center mb-8">
-                        <img src="{{ asset('sap.png') }}" alt="Partenaire Services à la Personne" class="h-20 mr-6">
+                        <img src="{{ asset('sap.png') }}" alt="Partenaire Services à la Personne" class="h-20 mr-6" loading="lazy">
                         <div class="text-left">
                             <h2 class="text-4xl font-bold text-primary-dark leading-tight">PARTENAIRE SAP</h2>
                             <p class="text-xl text-gray-600 leading-relaxed">Services à la Personne Agréé</p>

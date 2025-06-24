@@ -5,14 +5,18 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDM8KP8ZTH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-QDM8KP8ZTH');
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
           content="@yield('meta_description', 'Réparation informatique à domicile à Suresnes, Hauts-de-Seine et toute l\'Île-de-France. Intervention rapide 24h/7j, prix imbattables. Spécialiste PC, virus, imprimantes. ☎️ 07 60 48 73 34')">
     <meta name="keywords"
@@ -29,7 +33,11 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:image"
-          content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pzqJNB3Ubxq9iXh41G5x2Qy6S0abQW.png">
+          content="{{ asset('logo.png') }}">
+
+    <link rel="preload" href="{{ asset('logo.png') }}" as="image">
+    <link rel="preload" href="{{ asset('me.jpeg') }}" as="image">
+    <link rel="preload" href="{{ asset('sap.png') }}" as="image">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -39,42 +47,7 @@
 
     <title>@yield('title', 'Réparation Informatique Suresnes - Dépannage PC à Domicile | Prix Imbattables | Vassili JOFFROY')</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-blue': '#2596be',
-                        'primary-green': '#6bb210',
-                        'primary-dark': '#03102b'
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                    },
-                    keyframes: {
-                        glow: {
-                            '0%': {boxShadow: '0 0 5px rgba(107, 178, 16, 0.5)'},
-                            '100%': {boxShadow: '0 0 20px rgba(107, 178, 16, 0.8), 0 0 30px rgba(107, 178, 16, 0.6)'}
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Styles pour empêcher le zoom sur mobile -->
-    <style>
-        @media screen and (max-width: 768px) {
-            input, textarea, select {
-                font-size: 16px !important;
-                transform-origin: left top;
-                transform: scale(1);
-            }
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- JSON-LD Schema Amélioré -->
     <script type="application/ld+json">
@@ -295,7 +268,7 @@
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4 md:py-6">
             <a href="{{ route('home') }}" class="flex items-center hover:opacity-80 transition-opacity duration-300">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pzqJNB3Ubxq9iXh41G5x2Qy6S0abQW.png"
+                <img src="{{ asset('logo.png') }}"
                      alt="Vassili JOFFROY - Réparation Informatique"
                      class="h-12 w-12 md:h-16 md:w-16 mr-3 md:mr-4 hover:scale-110 transition-transform duration-300">
                 <div>
@@ -372,7 +345,7 @@
         <div class="grid md:grid-cols-4 gap-10">
             <div class="md:col-span-2">
                 <div class="flex items-center mb-8">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pzqJNB3Ubxq9iXh41G5x2Qy6S0abQW.png"
+                    <img src="{{ asset('logo.png') }}"
                          alt="Vassili JOFFROY" class="h-14 w-14 mr-4 rounded-full shadow-lg">
                     <div>
                         <h3 class="text-2xl font-bold leading-tight">Vassili JOFFROY</h3>
