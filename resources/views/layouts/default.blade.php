@@ -227,8 +227,7 @@
     </script>
 </head>
 <body class="bg-gray-50">
-<!-- Barre de contact supérieure - Version mobile optimisée -->
-<div class="bg-primary-dark text-white py-2 md:py-4 shadow-lg">
+<div class="hidden md:block bg-primary-dark text-white py-2 md:py-4 shadow-lg">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row justify-between items-center text-xs md:text-sm">
             <div class="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-8 mb-2 lg:mb-0">
@@ -238,8 +237,7 @@
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                     </svg>
-                    <span class="hidden md:inline">contact@vassilijoffroy.fr</span>
-                    <span class="md:hidden">Email</span>
+                    <span>contact@vassilijoffroy.fr</span>
                 </a>
                 <a href="https://g.co/kgs/NHHRgL3" target="_blank"
                    class="flex items-center hover:text-primary-green transition-colors duration-300 leading-relaxed">
@@ -248,8 +246,7 @@
                               d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                               clip-rule="evenodd"></path>
                     </svg>
-                    <span class="hidden md:inline">8 rue du Tertre, 92150 Suresnes</span>
-                    <span class="md:hidden">Suresnes</span>
+                    <span>8 rue du Tertre, 92150 Suresnes</span>
                 </a>
             </div>
             <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
