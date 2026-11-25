@@ -18,10 +18,10 @@ return [
     // Single source for the home rate card, the services page and the JSON-LD offer catalog
     'services' => [
         ['name' => 'Diagnostic à domicile', 'summary' => 'Avant toute intervention, sans engagement', 'price' => 'Offert', 'value' => 0, 'anchor' => 'reparation-pc'],
-        ['name' => "Réparation d'ordinateur", 'summary' => 'PC fixe ou portable, Mac, toutes marques', 'price' => 'Dès 40 €', 'value' => 40, 'anchor' => 'reparation-pc'],
-        ['name' => 'Suppression de virus', 'summary' => 'Nettoyage complet, sécurisation, antivirus', 'price' => '60 €', 'value' => 60, 'anchor' => 'suppression-virus'],
-        ['name' => 'Récupération de données', 'summary' => 'Disque abîmé, fichiers effacés', 'price' => '80 à 150 €', 'value' => 80, 'anchor' => 'reparation-pc'],
-        ['name' => 'Formation et accompagnement', 'summary' => 'Seniors et débutants, à votre rythme', 'price' => 'Dès 35 € de l’heure', 'value' => 35, 'unit' => 'HUR', 'anchor' => 'formation'],
+        ['name' => "Réparation d'ordinateur", 'summary' => 'PC fixe ou portable, Mac, toutes marques', 'price' => 'Dès 25 €', 'value' => 25, 'anchor' => 'reparation-pc'],
+        ['name' => 'Suppression de virus', 'summary' => 'Nettoyage complet, sécurisation, antivirus', 'price' => 'Dès 25 €', 'value' => 25, 'anchor' => 'suppression-virus'],
+        ['name' => 'Récupération de données', 'summary' => 'Disque abîmé, fichiers effacés', 'price' => 'Dès 25 €', 'value' => 25, 'anchor' => 'reparation-pc'],
+        ['name' => 'Formation et accompagnement', 'summary' => 'Seniors et débutants, à votre rythme', 'price' => 'Dès 25 € de l’heure', 'value' => 25, 'unit' => 'HUR', 'anchor' => 'formation'],
         ['name' => 'Montage de PC sur mesure', 'summary' => 'Bureautique, multimédia, gaming', 'price' => 'Sur devis', 'value' => null, 'anchor' => 'montage-pc'],
         ['name' => 'Sites et applications sur mesure', 'summary' => 'Avec mon agence, TFA The Forge Agency', 'price' => 'Sur devis', 'value' => null, 'anchor' => 'developpement-web'],
     ],

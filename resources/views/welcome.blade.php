@@ -63,7 +63,7 @@
         <div class="container-site grid gap-10 lg:grid-cols-12">
             <div class="lg:col-span-4">
                 <h2 id="tarifs-title" class="h-section">Ce que je fais, et à quel prix</h2>
-                <p class="lead mt-4">Des tarifs clairs, annoncés avant l'intervention, sans surprise.</p>
+                <p class="lead mt-4">À partir de 25 €, selon le temps passé. Le prix est annoncé avant l'intervention, sans surprise.</p>
                 <a href="{{ route('services') }}" class="link mt-6 inline-block text-lg">Le détail de chaque service</a>
             </div>
 

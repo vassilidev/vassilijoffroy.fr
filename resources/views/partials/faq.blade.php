@@ -5,7 +5,7 @@
         "Puis-je déposer mon ordinateur plutôt que de vous faire venir ?"
             => "Oui. Je n'ai pas de boutique, mais vous pouvez déposer votre ordinateur ou votre imprimante chez moi, à Suresnes, sur rendez-vous. Appelez-moi ou écrivez-moi sur WhatsApp pour convenir d'un créneau.",
         'Combien coûte un dépannage informatique ?'
-            => 'Le diagnostic à domicile est offert. Une réparation logicielle commence à 40 €, une suppression de virus coûte 60 €, une récupération de données de 80 à 150 €, et les cours de 35 à 45 € de l\'heure. Le prix est toujours annoncé avant l\'intervention. <a class="link" href="'.route('services').'">Voir tous les tarifs</a>.',
+            => 'Le diagnostic à domicile est offert. Réparations, suppression de virus, récupération de données et cours commencent à 25 €. Le prix dépend du temps passé et il est toujours annoncé avant l\'intervention. <a class="link" href="'.route('services').'">Voir tous les tarifs</a>.',
         'Combien coûte le déplacement ?'
             => "Il est offert à Suresnes et dans les communes voisines : Puteaux, Nanterre, Saint-Cloud, Rueil-Malmaison et Paris 16e. Comptez 10 € autour de Suresnes et 10 à 20 € ailleurs en Île-de-France. Les frais sont inclus si l'intervention est réussie.",
         'Quels moyens de paiement acceptez-vous ?'
@@ -17,7 +17,7 @@
         'Sur quel matériel intervenez-vous ?'
             => "Ordinateurs fixes et portables de toutes marques (HP, Dell, Lenovo, Asus, Acer, MSI), Mac, imprimantes et connexions Wi-Fi. Je monte aussi des PC sur mesure, du poste bureautique à la machine de jeu.",
         "Donnez-vous des cours d'informatique aux seniors ?"
-            => "Oui, chez vous et à votre rythme : prise en main de l'ordinateur, internet, e-mails, appels vidéo, photos, achats en ligne en sécurité. Je vous laisse un support écrit après chaque séance. À partir de 35 € de l'heure.",
+            => "Oui, chez vous et à votre rythme : prise en main de l'ordinateur, internet, e-mails, appels vidéo, photos, achats en ligne en sécurité. Je vous laisse un support écrit après chaque séance. À partir de 25 € de l'heure.",
         'Pouvez-vous intervenir à distance ?'
             => "Oui, pour la plupart des problèmes logiciels : je vous guide par téléphone ou je prends la main sur votre ordinateur, avec votre accord.",
         'Qui est Vassili Joffroy ?'

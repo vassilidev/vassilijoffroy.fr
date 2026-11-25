@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title', 'Services et tarifs de dépannage informatique | Vassili Joffroy')
-@section('description', "Réparation d'ordinateur dès 40 €, suppression de virus 60 €, récupération de données, montage de PC, cours pour seniors dès 35 € de l'heure. À domicile ou en dépôt à Suresnes.")
+@section('description', "Dépannage informatique dès 25 € : réparation d'ordinateur, suppression de virus, récupération de données, cours pour seniors, montage de PC. À domicile ou en dépôt à Suresnes.")
 @section('breadcrumb', 'Services')
 
 @section('content')
@@ -56,10 +56,10 @@
             <div class="lg:col-span-5">
                 <x-rate-card class="bg-paper ring-0" :rows="[
                     ['Diagnostic à domicile', 'Offert'],
-                    ['Réparation logicielle', 'Dès 40 €'],
-                    ['Nettoyage et optimisation', '60 €'],
+                    ['Réparation logicielle', 'Dès 25 €'],
+                    ['Nettoyage et optimisation', 'Dès 25 €'],
                     ['Remplacement de composant', 'Sur devis'],
-                    ['Récupération de données', '80 à 150 €'],
+                    ['Récupération de données', 'Dès 25 €'],
                 ]" note="Le prix est annoncé avant l'intervention."/>
             </div>
         </div>
@@ -100,7 +100,7 @@
             <div class="lg:col-span-5">
                 <x-rate-card :rows="[
                     ['Diagnostic à domicile', 'Offert'],
-                    ['Suppression de virus et sécurisation', '60 €'],
+                    ['Suppression de virus et sécurisation', 'Dès 25 €'],
                 ]" note="Si l'infection n'est pas éliminée, vous ne payez rien."/>
             </div>
         </div>
@@ -141,9 +141,9 @@
             </p>
             <div class="mt-12 grid gap-10 md:grid-cols-3">
                 @foreach([
-                    ['Premiers pas', 'Pour les seniors et les débutants', '35 €', ['Prise en main de l’ordinateur', 'Internet en sécurité', 'E-mails et pièces jointes', 'WhatsApp et Facebook', 'Appels vidéo avec vos proches', 'Photos et souvenirs', 'Achats en ligne sans risque']],
-                    ['Assistance et suivi', 'Pour ne plus rester bloqué', '40 €', ['Aide à distance', 'Problèmes qui reviennent', 'Sauvegarde et synchronisation', 'Installation de logiciels', 'Conseils de sécurité']],
-                    ['Aller plus loin', 'Pour progresser', '45 €', ['Word et Excel', 'Retouche photo', 'Montage vidéo', 'Créer un site simple', 'Initiation à la programmation', 'Domotique et objets connectés']],
+                    ['Premiers pas', 'Pour les seniors et les débutants', 'Dès 25 €', ['Prise en main de l’ordinateur', 'Internet en sécurité', 'E-mails et pièces jointes', 'WhatsApp et Facebook', 'Appels vidéo avec vos proches', 'Photos et souvenirs', 'Achats en ligne sans risque']],
+                    ['Assistance et suivi', 'Pour ne plus rester bloqué', 'Dès 25 €', ['Aide à distance', 'Problèmes qui reviennent', 'Sauvegarde et synchronisation', 'Installation de logiciels', 'Conseils de sécurité']],
+                    ['Aller plus loin', 'Pour progresser', 'Dès 25 €', ['Word et Excel', 'Retouche photo', 'Montage vidéo', 'Créer un site simple', 'Initiation à la programmation', 'Domotique et objets connectés']],
                 ] as [$name, $for, $price, $items])
                     <div class="flex flex-col border-t-2 border-ink pt-6">
                         <h3 class="h-card">{{ $name }}</h3>
