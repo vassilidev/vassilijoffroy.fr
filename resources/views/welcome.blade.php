@@ -1,781 +1,150 @@
 @extends('layouts.default')
 
-@section('title', 'Réparation Informatique Suresnes - Dépannage PC à Domicile | Prix Imbattables | Vassili JOFFROY')
-@section('meta_description', 'Réparation informatique à domicile à Suresnes, Hauts-de-Seine et toute l\'Île-de-France. Intervention rapide 24h/7j, prix imbattables, crédit d\'impôt 50%. ☎️ 07 60 48 73 34')
+@section('title', 'Dépannage informatique à domicile à Suresnes | Vassili Joffroy')
+@section('description', "Technicien informatique à Suresnes : dépannage PC et Mac à domicile ou en dépôt, virus, données, cours pour seniors. Diagnostic offert, prix annoncé à l'avance.")
 
 @section('content')
-    <!-- Hero Section - Optimisé mobile -->
-    <section
-            class="bg-gradient-to-br from-primary-dark via-primary-blue to-primary-green text-white py-8 sm:py-12 md:py-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="container mx-auto px-3 sm:px-4 text-center relative z-10">
-            <!-- Titre principal - Responsive -->
-            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight">
-                PROBLÈMES INFORMATIQUE ?<br>
-                <span class="text-primary-green animate-pulse">J'ARRIVE !</span>
-            </h1>
+    @php($site = config('site'))
 
-            <!-- Description - Adaptée mobile -->
-            <p class="text-base sm:text-lg md:text-2xl lg:text-3xl mb-3 sm:mb-4 max-w-4xl mx-auto font-light leading-relaxed">
-                Réparation informatique à domicile<br class="hidden sm:block">
-                <span class="block sm:inline"> à <strong>Suresnes</strong> et toute l'<strong>Île-de-France</strong></span>
-            </p>
-
-            <p class="text-sm sm:text-base md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-12 text-primary-green font-bold">
-                Rapide • Professionnel • Prix imbattables
-            </p>
-
-            <!-- CTA Principal - Mobile first -->
-            <div class="mb-6 sm:mb-8 md:mb-12">
-                <a href="tel:0760487334"
-                   class="inline-block bg-primary-green hover:bg-green-400 hover:shadow-2xl hover:shadow-green-500/50 text-white px-6 sm:px-10 md:px-16 py-4 sm:py-6 md:py-8 rounded-xl md:rounded-2xl text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold transition-all duration-300 transform hover:scale-105 mb-4">
-                    📞 M'APPELER MAINTENANT
-                </a>
-
-                <!-- Badges - Empilés sur mobile -->
-                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mt-4 sm:mt-6">
-                    <div class="bg-green-500/20 backdrop-blur-sm px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg md:rounded-2xl border-2 border-green-400 shadow-lg">
-                        <span class="font-bold text-sm sm:text-lg md:text-2xl text-green-300">🟢 OUVERT 24H/7J</span>
-                    </div>
-                    <div class="bg-yellow-500/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-lg md:rounded-xl border border-yellow-400">
-                        <span class="font-bold text-sm sm:text-base md:text-lg text-yellow-200">⭐ 4.9/5 sur +60 avis</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Grille d'avantages - Responsive -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto">
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 md:p-8 rounded-lg md:rounded-2xl border border-white/20 hover:bg-white/25 transition-all duration-300">
-                    <div class="text-2xl sm:text-3xl md:text-5xl mb-2 md:mb-4">⚡</div>
-                    <h3 class="font-bold text-xs sm:text-sm md:text-xl mb-1 md:mb-3 leading-tight">INTERVENTION
-                        RAPIDE</h3>
-                    <p class="text-xs sm:text-sm md:text-lg leading-relaxed">Dépannage le jour même</p>
-                </div>
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 md:p-8 rounded-lg md:rounded-2xl border border-white/20 hover:bg-white/25 transition-all duration-300">
-                    <div class="text-2xl sm:text-3xl md:text-5xl mb-2 md:mb-4">💰</div>
-                    <h3 class="font-bold text-xs sm:text-sm md:text-xl mb-1 md:mb-3 leading-tight">PRIX IMBATTABLES</h3>
-                    <p class="text-xs sm:text-sm md:text-lg leading-relaxed">Meilleurs tarifs d'IDF</p>
-                </div>
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 md:p-8 rounded-lg md:rounded-2xl border border-white/20 hover:bg-white/25 transition-all duration-300">
-                    <div class="text-2xl sm:text-3xl md:text-5xl mb-2 md:mb-4">🏆</div>
-                    <h3 class="font-bold text-xs sm:text-sm md:text-xl mb-1 md:mb-3 leading-tight">RÉPARATION
-                        GARANTIE</h3>
-                    <p class="text-xs sm:text-sm md:text-lg leading-relaxed">Ou remboursement</p>
-                </div>
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 md:p-8 rounded-lg md:rounded-2xl border border-white/20 hover:bg-white/25 transition-all duration-300">
-                    <div class="text-2xl sm:text-3xl md:text-5xl mb-2 md:mb-4">💳</div>
-                    <h3 class="font-bold text-xs sm:text-sm md:text-xl mb-1 md:mb-3 leading-tight">CRÉDIT D'IMPÔT
-                        50%</h3>
-                    <p class="text-xs sm:text-sm md:text-lg leading-relaxed">Services à la personne</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary-dark mb-6 leading-tight">
-                    MES SERVICES DE RÉPARATION
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Spécialiste en dépannage informatique, j'interviens à votre domicile pour tous vos problèmes
-                    d'ordinateur.<br>
-                    <span class="text-primary-blue font-semibold">Réparation, formation, accompagnement personnalisé !</span>
+    <section>
+        <div class="container-site grid items-center gap-14 pb-14 pt-10 md:pt-16 lg:grid-cols-12 lg:pb-20 lg:pt-20">
+            <div class="lg:col-span-7">
+                <x-open-status ping class="mb-6 rounded-full bg-call-light px-4 py-2 text-lg"/>
+                <h1 class="h-display">Dépannage informatique à domicile à Suresnes</h1>
+                <p class="lead mt-6 max-w-xl">
+                    Ordinateur bloqué, message inquiétant, virus, imprimante ou <span class="whitespace-nowrap">Wi-Fi</span> qui ne répond plus ? Pas de
+                    panique : je viens chez vous dans les Hauts-de-Seine et en <span class="whitespace-nowrap">Île-de-France</span>,
+                    ou vous déposez votre matériel chez moi.
                 </p>
+
+                <div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                    <x-call-button class="btn-lg md:min-h-[5rem] md:px-10 md:text-[2rem]"/>
+                    <x-whatsapp-button class="btn-lg">Écrire sur WhatsApp</x-whatsapp-button>
+                </div>
+                <p class="mt-5 text-lg text-ink-soft">Je réponds vite, 7 jours sur 7, et le diagnostic est offert.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <div class="group bg-gray-50 hover:bg-primary-blue hover:text-white p-8 rounded-2xl text-center transition-all duration-200 transform hover:scale-102 shadow-lg hover:shadow-xl flex flex-col h-full">
-                    <div class="text-6xl mb-6 transition-transform duration-200 group-hover:scale-110">💻</div>
-                    <h3 class="text-2xl font-bold mb-4 leading-tight">Réparation PC</h3>
-                    <p class="mb-6 text-lg leading-relaxed flex-grow">Fixe et portable, toutes marques</p>
-                    <a href="tel:0760487334"
-                       class="bg-primary-blue group-hover:bg-white group-hover:text-primary-blue hover:shadow-lg text-white px-6 py-3 rounded-xl transition-all duration-200 font-bold inline-block mt-auto">
-                        M'appeler
-                    </a>
-                </div>
+            <figure class="relative mx-auto w-full max-w-[400px] lg:col-span-5 lg:mr-0">
+                <img src="{{ asset('images/vassili-joffroy.webp') }}" width="400" height="400" fetchpriority="high"
+                     alt="Portrait de Vassili Joffroy, technicien et consultant informatique à Suresnes"
+                     class="aspect-square w-full rounded-[2rem] object-cover">
+                <figcaption class="absolute -bottom-6 left-5 right-5 rounded-2xl bg-white px-5 py-4 shadow-[0_12px_32px_-12px_rgba(16,42,67,0.35)] ring-1 ring-line sm:left-6 sm:right-auto">
+                    <span class="flex text-[#E8A317]" aria-hidden="true">
+                        @for($i = 0; $i < 5; $i++)<x-icon name="star" class="size-5"/>@endfor
+                    </span>
+                    <span class="mt-1 block"><strong>{{ str_replace('.', ',', $site['rating']['value']) }} sur 5</strong> sur plus de {{ $site['rating']['count'] }} avis Google</span>
+                </figcaption>
+            </figure>
+        </div>
 
-                <div class="group bg-gray-50 hover:bg-red-500 hover:text-white p-8 rounded-2xl text-center transition-all duration-200 transform hover:scale-102 shadow-lg hover:shadow-xl flex flex-col h-full">
-                    <div class="text-6xl mb-6 transition-transform duration-200 group-hover:scale-110">🦠</div>
-                    <h3 class="text-2xl font-bold mb-4 leading-tight">Suppression Virus</h3>
-                    <p class="mb-6 text-lg leading-relaxed flex-grow">Nettoyage complet et sécurisation</p>
-                    <a href="tel:0760487334"
-                       class="bg-red-500 group-hover:bg-white group-hover:text-red-500 hover:shadow-lg text-white px-6 py-3 rounded-xl transition-all duration-200 font-bold inline-block mt-auto">
-                        Urgence virus
-                    </a>
+        <div class="container-site">
+            <dl class="grid gap-x-8 gap-y-6 border-t border-line py-10 sm:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <dt class="text-lg font-bold">Diagnostic offert</dt>
+                    <dd class="mt-1 text-ink-soft">Je vous explique la panne avant de toucher à quoi que ce soit.</dd>
                 </div>
-
-                <div class="group bg-gray-50 hover:bg-primary-green hover:text-white p-8 rounded-2xl text-center transition-all duration-200 transform hover:scale-102 shadow-lg hover:shadow-xl flex flex-col h-full">
-                    <div class="text-6xl mb-6 transition-transform duration-200 group-hover:scale-110">🔧</div>
-                    <h3 class="text-2xl font-bold mb-4 leading-tight">Montage PC</h3>
-                    <p class="mb-6 text-lg leading-relaxed flex-grow">Assemblage sur mesure</p>
-                    <a href="tel:0760487334"
-                       class="bg-primary-green group-hover:bg-white group-hover:text-primary-green hover:shadow-lg text-white px-6 py-3 rounded-xl transition-all duration-200 font-bold inline-block mt-auto">
-                        Devis gratuit
-                    </a>
+                <div>
+                    <dt class="text-lg font-bold">Prix annoncé à l'avance</dt>
+                    <dd class="mt-1 text-ink-soft">Vous savez combien vous payez avant que je commence.</dd>
                 </div>
-
-                <div class="group bg-gray-50 hover:bg-purple-500 hover:text-white p-8 rounded-2xl text-center transition-all duration-200 transform hover:scale-102 shadow-lg hover:shadow-xl flex flex-col h-full">
-                    <div class="text-6xl mb-6 transition-transform duration-200 group-hover:scale-110">👨‍🏫</div>
-                    <h3 class="text-2xl font-bold mb-4 leading-tight">Formation & Support</h3>
-                    <p class="mb-6 text-lg leading-relaxed flex-grow">Cours personnalisés seniors & débutants</p>
-                    <a href="tel:0760487334"
-                       class="bg-purple-500 group-hover:bg-white group-hover:text-purple-500 hover:shadow-lg text-white px-6 py-3 rounded-xl transition-all duration-200 font-bold inline-block mt-auto">
-                        Accompagnement
-                    </a>
+                <div>
+                    <dt class="text-lg font-bold">Payé si c'est réglé</dt>
+                    <dd class="mt-1 text-ink-soft">Si je ne résous pas le problème, vous ne payez rien.</dd>
                 </div>
-            </div>
+                <div>
+                    <dt class="text-lg font-bold">Dépôt possible</dt>
+                    <dd class="mt-1 text-ink-soft">Chez moi à Suresnes, sur rendez-vous.</dd>
+                </div>
+            </dl>
         </div>
     </section>
 
-    <!-- À Propos Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-primary-dark mb-6 leading-tight">
-                        👨‍💻 À PROPOS
-                    </h2>
-                    <p class="text-xl text-gray-600 leading-relaxed">Votre expert informatique de confiance</p>
-                </div>
+    <section id="tarifs" class="border-t border-line py-16 md:py-24" aria-labelledby="tarifs-title">
+        <div class="container-site grid gap-10 lg:grid-cols-12">
+            <div class="lg:col-span-4">
+                <h2 id="tarifs-title" class="h-section">Ce que je fais, et à quel prix</h2>
+                <p class="lead mt-4">Des tarifs clairs, annoncés avant l'intervention, sans surprise.</p>
+                <a href="{{ route('services') }}" class="link mt-6 inline-block text-lg">Le détail de chaque service</a>
+            </div>
 
-                <div class="grid lg:grid-cols-3 gap-12 items-center">
-                    <div class="lg:col-span-1 text-center">
-                        <div class="relative inline-block mb-8">
-                            <img src="{{ asset('me.jpeg') }}" alt="Vassili JOFFROY - Expert Informatique"
-                                 class="w-64 h-64 rounded-2xl shadow-2xl mx-auto object-cover" loading="lazy">
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-dark mb-2 leading-tight">Vassili JOFFROY</h3>
-                        <p class="text-lg text-primary-blue font-semibold">Expert Informatique • 23 ans</p>
-                    </div>
+            <ul class="divide-y divide-line border-y border-line lg:col-span-8">
+                @foreach($site['services'] as $service)
+                    <li>
+                        <a href="{{ route('services') }}#{{ $service['anchor'] }}" class="group flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-4">
+                            <span class="min-w-0">
+                                <span class="block text-xl font-bold transition-colors group-hover:text-seine">{{ $service['name'] }}</span>
+                                <span class="block text-ink-soft">{{ $service['summary'] }}</span>
+                            </span>
+                            <span class="leader" aria-hidden="true"></span>
+                            <span class="whitespace-nowrap text-xl font-extrabold {{ $service['value'] === 0 ? 'text-call-dark' : '' }}">{{ $service['price'] }}</span>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </section>
 
-                    <div class="lg:col-span-2">
-                        <div class="bg-white p-10 rounded-3xl shadow-xl">
-                            <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
-                                <p>
-                                    Depuis <strong class="text-primary-blue">plus de 8 ans</strong>, je suis passionné
-                                    par l'informatique et j'accompagne particuliers et professionnels dans la résolution
-                                    de leurs problèmes techniques.
-                                </p>
-                                <p>
-                                    J'interviens à domicile et à distance pour vous offrir des solutions rapides et
-                                    efficaces, que ce soit pour une réparation d'urgence, un montage sur mesure ou un
-                                    accompagnement personnalisé.
-                                </p>
-                                <p>
-                                    Ma formation professionnelle en informatique, domotique et réparation, complétée par
-                                    une expérience en entreprise, me permet de vous garantir un service de qualité avec
-                                    une approche technique rigoureuse.
-                                </p>
-                                <p>
-                                    En parallèle de mon activité de dépannage, je dirige également une agence de
-                                    développement d'applications, ce qui me donne une vision complète et moderne des
-                                    enjeux informatiques actuels.
-                                </p>
-                            </div>
+    <section class="bg-paper py-16 md:py-24" aria-labelledby="etapes-title">
+        <div class="container-site">
+            <h2 id="etapes-title" class="h-section max-w-2xl">Comment se passe une intervention</h2>
+            <ol class="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+                @foreach([
+                    ['Vous m’appelez', 'Pas besoin de termes techniques : décrivez ce que vous voyez, je vous donne une première estimation.'],
+                    ['Je viens chez vous', 'Ou vous déposez votre matériel chez moi à Suresnes. Le diagnostic est offert.'],
+                    ['Je répare et j’explique', 'Sans jargon, avec des conseils simples pour éviter que la panne revienne.'],
+                    ['Vous payez si c’est réglé', 'Espèces, chèque, virement ou carte, une fois la panne réglée.'],
+                ] as [$step, $text])
+                    <li class="border-t-2 border-ink pt-5">
+                        <span class="block text-5xl font-extrabold tabular-nums text-seine" aria-hidden="true">{{ $loop->iteration }}</span>
+                        <h3 class="h-card mt-4">{{ $step }}</h3>
+                        <p class="mt-2 text-lg text-ink-soft">{{ $text }}</p>
+                    </li>
+                @endforeach
+            </ol>
+        </div>
+    </section>
 
-                            <div class="mt-10 grid md:grid-cols-3 gap-6">
-                                <div class="text-center p-6 bg-primary-blue/5 rounded-2xl">
-                                    <div class="text-3xl mb-3">⚡</div>
-                                    <h4 class="font-bold text-primary-dark mb-2 leading-tight">Réactivité</h4>
-                                    <p class="text-gray-600">Intervention rapide 24h/7j</p>
-                                </div>
-                                <div class="text-center p-6 bg-primary-green/5 rounded-2xl">
-                                    <div class="text-3xl mb-3">🎯</div>
-                                    <h4 class="font-bold text-primary-dark mb-2 leading-tight">Expertise</h4>
-                                    <p class="text-gray-600">+8 ans d'expérience</p>
-                                </div>
-                                <div class="text-center p-6 bg-purple-500/5 rounded-2xl">
-                                    <div class="text-3xl mb-3">🤝</div>
-                                    <h4 class="font-bold text-primary-dark mb-2 leading-tight">Proximité</h4>
-                                    <p class="text-gray-600">Service personnalisé</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Une question sur mon parcours ou mes services ?
+    <section class="py-16 md:py-24" aria-labelledby="qui-title">
+        <div class="container-site grid gap-12 lg:grid-cols-12">
+            <div class="lg:col-span-7">
+                <h2 id="qui-title" class="h-section">Qui vient chez vous</h2>
+                <div class="mt-6 max-w-2xl space-y-5 text-lg md:text-xl">
+                    <p>
+                        Je m'appelle Vassili Joffroy. Je dépanne des ordinateurs à Suresnes et je conçois des logiciels
+                        pour des entreprises exigeantes : je suis CTO et associé de TaxCut, une start-up incubée à
+                        Station F, et je dirige depuis 2018 l'agence de développement TFA The Forge Agency.
                     </p>
-                    <a href="tel:0760487334"
-                       class="bg-primary-blue hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/50 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300">
-                        📞 Discutons de votre projet
-                    </a>
+                    <p class="text-ink-soft">
+                        Pour vous, cela veut dire un diagnostic précis, une réparation propre et des explications
+                        claires, que vous soyez à l'aise avec l'informatique ou que vous débutiez.
+                    </p>
                 </div>
+                <a href="{{ route('about') }}" class="link mt-8 inline-block text-lg">Découvrir mon parcours</a>
             </div>
+
+            <dl class="divide-y divide-line border-y border-line lg:col-span-5">
+                <div class="py-5">
+                    <dt class="text-ink-soft">Depuis 2024</dt>
+                    <dd class="text-xl font-bold">CTO et associé de TaxCut</dd>
+                </div>
+                <div class="py-5">
+                    <dt class="text-ink-soft">Depuis 2018</dt>
+                    <dd class="text-xl font-bold">Fondateur de TFA The Forge Agency</dd>
+                </div>
+                <div class="py-5">
+                    <dt class="text-ink-soft">Sur Malt</dt>
+                    <dd class="text-xl font-bold">4,9 sur 5, 35 avis de clients professionnels</dd>
+                </div>
+                <div class="py-5">
+                    <dt class="text-ink-soft">Ils m'ont confié leurs projets</dt>
+                    <dd class="text-xl font-bold">Orange, CFDT, Autorité nationale des jeux, Atos, ClubFunding</dd>
+                </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Crédit d'impôt Section (simplifiée) -->
-    <section class="py-20 bg-gradient-to-r from-green-50 to-blue-50">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="bg-white p-12 rounded-3xl shadow-2xl border-4 border-primary-green">
-                    <div class="flex items-center justify-center mb-8">
-                        <img src="{{ asset('sap.png') }}" alt="Partenaire Services à la Personne" class="h-20 mr-6"
-                             loading="lazy">
-                        <div class="text-left">
-                            <h2 class="text-4xl font-bold text-primary-dark leading-tight">PARTENAIRE SAP</h2>
-                            <p class="text-xl text-gray-600 leading-relaxed">Services à la Personne Agréé</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-primary-green text-white p-8 rounded-2xl mb-8">
-                        <h3 class="text-3xl font-bold mb-4 leading-tight">💰 CRÉDIT D'IMPÔT 50%</h3>
-                        <p class="text-xl leading-relaxed">L'État vous rembourse la moitié de vos frais !</p>
-                    </div>
-
-                    <div class="grid md:grid-cols-3 gap-6 text-lg">
-                        <div class="bg-gray-50 p-6 rounded-xl">
-                            <div class="text-3xl mb-3">💳</div>
-                            <p class="font-bold text-primary-dark mb-2 leading-tight">Vous payez 100€</p>
-                            <p class="text-gray-600 leading-relaxed">Pour votre intervention</p>
-                        </div>
-                        <div class="bg-primary-blue text-white p-6 rounded-xl">
-                            <div class="text-3xl mb-3">🏛️</div>
-                            <p class="font-bold mb-2 leading-tight">L'État rembourse 50€</p>
-                            <p class="leading-relaxed">Crédit d'impôt automatique</p>
-                        </div>
-                        <div class="bg-primary-green text-white p-6 rounded-xl">
-                            <div class="text-3xl mb-3">✅</div>
-                            <p class="font-bold mb-2 leading-tight">Coût réel : 50€</p>
-                            <p class="leading-relaxed">Jusqu'à 1500€/an remboursés</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-primary-dark mb-6 leading-tight">
-                        ❓ QUESTIONS FRÉQUENTES
-                    </h2>
-                    <p class="text-xl text-gray-600 leading-relaxed">Toutes les réponses à vos questions sur le
-                        dépannage informatique à domicile</p>
-                </div>
-
-                <div class="space-y-4">
-                    <!-- FAQ Item 1 -->
-                    <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="1">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
-                                    ⏰ Quel est le délai d'intervention pour un dépannage PC à domicile à Suresnes ?
-                                </h3>
-                                <svg class="faq-icon w-6 h-6 text-primary-blue transform transition-transform duration-300"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out"
-                             data-content="1">
-                            <div class="px-8 pb-8">
-                                <div class="text-lg text-gray-700 leading-relaxed">
-                                    <p class="mb-4"><strong class="text-primary-green">Intervention le jour même
-                                            possible dans toute l'Île-de-France !</strong></p>
-                                    <ul class="space-y-2 ml-6 mb-4">
-                                        <li>• <strong>Urgences informatiques :</strong> Dans l'heure (24h/7j, même le
-                                            dimanche)
-                                        </li>
-                                        <li>• <strong>Dépannage standard :</strong> Sous 24h maximum</li>
-                                        <li>• <strong>Rendez-vous programmés :</strong> Selon vos disponibilités</li>
-                                    </ul>
-                                    <p>Pour Suresnes et communes limitrophes, je peux souvent intervenir dans les 2-3
-                                        heures. <a href="{{ route('contact') }}"
-                                                   class="text-primary-blue hover:underline">Contactez-moi</a> pour
-                                        connaître ma disponibilité immédiate.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 2 -->
-                    <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="2">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
-                                    💳 Comment bénéficier du crédit d'impôt sur mes prestations informatiques à domicile
-                                    ?
-                                </h3>
-                                <svg class="faq-icon w-6 h-6 text-primary-blue transform transition-transform duration-300 rotate-180"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out"
-                             data-content="2">
-                            <div class="px-8 pb-8">
-                                <div class="text-lg text-gray-700 leading-relaxed">
-                                    <p class="mb-4"><strong class="text-primary-green">Crédit d'impôt automatique de 50%
-                                            grâce à mon agrément Services à la Personne :</strong></p>
-                                    <ul class="space-y-2 ml-6 mb-4">
-                                        <li>• <strong>Avance immédiate :</strong> Payez seulement 50% le jour J</li>
-                                        <li>• <strong>Remboursement fiscal :</strong> Jusqu'à 1500€/an remboursés par
-                                            l'État
-                                        </li>
-                                        <li>• <strong>Démarches simplifiées :</strong> Je m'occupe de toute la paperasse
-                                        </li>
-                                    </ul>
-                                    <p>Exemple concret : intervention à 100€ = vous payez 50€ réels. Tous les services
-                                        de <a href="{{ route('services') }}" class="text-primary-blue hover:underline">réparation
-                                            informatique</a> sont éligibles (main-d'œuvre + déplacement).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 3 -->
-                    <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="3">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
-                                    💰 Quels sont les moyens de paiement acceptés pour le dépannage informatique ?
-                                </h3>
-                                <svg class="faq-icon w-6 h-6 text-primary-blue transform transition-transform duration-300 rotate-180"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out"
-                             data-content="3">
-                            <div class="px-8 pb-8">
-                                <div class="text-lg text-gray-700 leading-relaxed">
-                                    <p class="mb-4"><strong class="text-primary-green">Plusieurs options de paiement
-                                            pour votre confort :</strong></p>
-                                    <ul class="space-y-2 ml-6 mb-4">
-                                        <li>• <strong>Espèces :</strong> Paiement direct après intervention</li>
-                                        <li>• <strong>Chèque :</strong> À l'ordre de Vassili JOFFROY</li>
-                                        <li>• <strong>Virement bancaire :</strong> RIB fourni sur demande</li>
-                                        <li>• <strong>Carte bancaire :</strong> Terminal de paiement mobile disponible
-                                        </li>
-                                    </ul>
-                                    <p>Paiement toujours après intervention réussie. Pour le crédit d'impôt, je peux
-                                        encaisser seulement 50% et l'État vous rembourse le reste directement.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 4 -->
-                    <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="4">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
-                                    🏆 Quelles garanties offrez-vous sur vos réparations PC et suppression de virus ?
-                                </h3>
-                                <svg class="faq-icon w-6 h-6 text-primary-blue transform transition-transform duration-300 rotate-180"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out"
-                             data-content="4">
-                            <div class="px-8 pb-8">
-                                <div class="text-lg text-gray-700 leading-relaxed">
-                                    <p class="mb-4"><strong class="text-primary-green">Satisfaction garantie à 100% sur
-                                            tous mes services :</strong></p>
-                                    <ul class="space-y-2 ml-6 mb-4">
-                                        <li>• <strong>Réparation réussie</strong> ou remboursement intégral</li>
-                                        <li>• <strong>Diagnostic gratuit</strong> à domicile sans engagement</li>
-                                        <li>• <strong>Garantie 3 mois</strong> sur les réparations effectuées</li>
-                                        <li>• <strong>Support téléphonique gratuit</strong> pendant 1 mois après
-                                            intervention
-                                        </li>
-                                    </ul>
-                                    <p>Si le problème persiste après mon passage, je reviens gratuitement. Transparence
-                                        totale sur les tarifs avant toute intervention.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 5 -->
-                    <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="5">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
-                                    🚗 Comment fonctionnent les frais de déplacement en Île-de-France ?
-                                </h3>
-                                <svg class="faq-icon w-6 h-6 text-primary-blue transform transition-transform duration-300 rotate-180"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out"
-                             data-content="5">
-                            <div class="px-8 pb-8">
-                                <div class="text-lg text-gray-700 leading-relaxed">
-                                    <p class="mb-4"><strong class="text-primary-green">Frais de déplacement transparents
-                                            et inclus si intervention réussie :</strong></p>
-                                    <ul class="space-y-2 ml-6 mb-4">
-                                        <li>• <strong>Suresnes & limitrophes :</strong> GRATUIT (Puteaux, Nanterre,
-                                            Saint-Cloud...)
-                                        </li>
-                                        <li>• <strong>Proche de Suresnes :</strong> 10€ (Neuilly, Courbevoie,
-                                            Garches...)
-                                        </li>
-                                        <li>• <strong>Reste Île-de-France :</strong> 10-20€ maximum (Paris,
-                                            Versailles...)
-                                        </li>
-                                        <li>• <strong>Si réparation effectuée :</strong> Frais inclus dans le prix final
-                                        </li>
-                                    </ul>
-                                    <p>Aucun frais caché ! Le déplacement est offert si je résous votre problème
-                                        informatique. Devis gratuit sur place.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 6 -->
-                    <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="6">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
-                                    🔧 Que comprend une intervention de dépannage informatique à domicile ?
-                                </h3>
-                                <svg class="faq-icon w-6 h-6 text-primary-blue transform transition-transform duration-300 rotate-180"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out"
-                             data-content="6">
-                            <div class="px-8 pb-8">
-                                <div class="text-lg text-gray-700 leading-relaxed">
-                                    <p class="mb-4"><strong class="text-primary-green">Service complet de A à Z inclus
-                                            dans le prix :</strong></p>
-                                    <ul class="space-y-2 ml-6 mb-4">
-                                        <li>• <strong>Diagnostic complet</strong> de votre matériel informatique</li>
-                                        <li>• <strong>Explication claire</strong> du problème en langage simple</li>
-                                        <li>• <strong>Réparation</strong> ou remplacement des composants défaillants
-                                        </li>
-                                        <li>• <strong>Tests de fonctionnement</strong> et optimisation des performances
-                                        </li>
-                                        <li>• <strong>Formation personnalisée</strong> pour éviter les problèmes futurs
-                                        </li>
-                                        <li>• <strong>Conseils de sécurité</strong> et recommandations d'usage</li>
-                                    </ul>
-                                    <p>Que ce soit pour une <a href="{{ route('services') }}"
-                                                               class="text-primary-blue hover:underline">réparation
-                                            PC</a>, suppression de virus ou montage d'ordinateur, vous bénéficiez d'un
-                                        accompagnement complet.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 7 -->
-                    <div class="bg-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                        <button class="faq-toggle w-full p-8 text-left focus:outline-none" data-faq="7">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl md:text-2xl font-bold text-primary-dark leading-tight">
-                                    🕐 Intervenez-vous le weekend et les jours fériés pour les urgences informatiques ?
-                                </h3>
-                                <svg class="faq-icon w-6 h-6 text-primary-blue transform transition-transform duration-300 rotate-180"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-out"
-                             data-content="7">
-                            <div class="px-8 pb-8">
-                                <div class="text-lg text-gray-700 leading-relaxed">
-                                    <p class="mb-4"><strong class="text-primary-green">Service d'urgence 24h/7j, même le
-                                            dimanche et jours fériés :</strong></p>
-                                    <ul class="space-y-2 ml-6 mb-4">
-                                        <li>• <strong>Lundi-Vendredi :</strong> 8h-20h (tarif normal)</li>
-                                        <li>• <strong>Weekend :</strong> 9h-18h (tarif normal)</li>
-                                        <li>• <strong>Urgences 24h/7j :</strong> Supplément +20€ la nuit/weekend</li>
-                                        <li>• <strong>Jours fériés :</strong> Intervention possible selon urgence</li>
-                                    </ul>
-                                    <p>Votre ordinateur ne démarre plus un dimanche ? Virus qui bloque tout un jour
-                                        férié ? J'interviens rapidement pour les vraies urgences informatiques.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">Une autre question sur le dépannage
-                        informatique à domicile ?</p>
-                    <a href="tel:0760487334"
-                       class="bg-primary-blue hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/50 text-white px-12 py-6 rounded-2xl text-2xl font-bold transition-all duration-300 transform hover:scale-105">
-                        📞 M'APPELER MAINTENANT
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- JavaScript pour l'accordéon FAQ -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Sélectionner tous les boutons FAQ
-            const faqButtons = document.querySelectorAll('.faq-toggle');
-
-            faqButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const faqId = this.getAttribute('data-faq');
-                    const content = document.querySelector(`[data-content="${faqId}"]`);
-                    const icon = this.querySelector('.faq-icon');
-
-                    // Fermer toutes les autres FAQ
-                    faqButtons.forEach(otherButton => {
-                        if (otherButton !== this) {
-                            const otherId = otherButton.getAttribute('data-faq');
-                            const otherContent = document.querySelector(`[data-content="${otherId}"]`);
-                            const otherIcon = otherButton.querySelector('.faq-icon');
-
-                            otherContent.style.maxHeight = '0px';
-                            otherIcon.style.transform = 'rotate(180deg)';
-                        }
-                    });
-
-                    // Toggle la FAQ actuelle
-                    if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        icon.style.transform = 'rotate(0deg)';
-                    } else {
-                        content.style.maxHeight = '0px';
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-
-            // Ouvrir la première FAQ par défaut
-            const firstContent = document.querySelector('[data-content="1"]');
-            const firstIcon = document.querySelector('[data-faq="1"] .faq-icon');
-            if (firstContent && firstIcon) {
-                firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
-                firstIcon.style.transform = 'rotate(0deg)';
-            }
-        });
-    </script>
-
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary-dark mb-6 leading-tight">
-                    ⭐ ILS ME FONT CONFIANCE
-                </h2>
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">Découvrez les avis authentiques de mes clients
-                    satisfaits</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="https://g.co/kgs/sbiL66j" target="_blank"
-                       class="bg-red-500 hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/50 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300">
-                        📱 Voir avis Google
-                    </a>
-                    <a href="https://www.pagesjaunes.fr/pros/60418181" target="_blank"
-                       class="bg-yellow-500 hover:bg-yellow-600 hover:shadow-lg hover:shadow-yellow-500/50 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300">
-                        📋 Voir avis Pages Jaunes
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-primary-blue text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                            LG
-                        </div>
-                        <div>
-                            <div class="font-bold text-primary-dark text-lg">Laura G.</div>
-                            <div class="text-gray-500 text-sm">Suresnes</div>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="text-yellow-400 text-2xl">★★★★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg italic leading-relaxed">"Mon ordinateur ne s'allumait plus, sûrement
-                        un problème de batterie. Et à distance il m'a expliqué comment la retirer et faire les tests!
-                        Incroyable."</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-primary-green text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                            ND
-                        </div>
-                        <div>
-                            <div class="font-bold text-primary-dark text-lg">Nathalie D.</div>
-                            <div class="text-gray-500 text-sm">Rueil-Malmaison</div>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="text-yellow-400 text-2xl">★★★★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg italic leading-relaxed">"Ce jeune homme calme vous prodigue conseils
-                        avec grand professionnalisme et efficacité. Je recommande vivement ses services."</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                            RG
-                        </div>
-                        <div>
-                            <div class="font-bold text-primary-dark text-lg">Romain G.</div>
-                            <div class="text-gray-500 text-sm">Saint-Cloud</div>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="text-yellow-400 text-2xl">★★★★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg italic leading-relaxed">"Intervention réalisée en urgence un
-                        dimanche, problème résolu dans la journée en un temps record. Très pro et pédagogue."</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-red-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                            SA
-                        </div>
-                        <div>
-                            <div class="font-bold text-primary-dark text-lg">Stephanie A.</div>
-                            <div class="text-gray-500 text-sm">Suresnes</div>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="text-yellow-400 text-2xl">★★★★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg italic leading-relaxed">"Très compétent et surtout très honnête...il
-                        aime et connait son métier. Et le tout avec des prix très corrects."</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-yellow-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                            DM
-                        </div>
-                        <div>
-                            <div class="font-bold text-primary-dark text-lg">Doréa M.</div>
-                            <div class="text-gray-500 text-sm">Rueil-Malmaison</div>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="text-yellow-400 text-2xl">★★★★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg italic leading-relaxed">"Une personne incroyable et très
-                        professionnelle, foncez ! merci encore 👍✨"</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-indigo-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                            AC
-                        </div>
-                        <div>
-                            <div class="font-bold text-primary-dark text-lg">Arnaud C.</div>
-                            <div class="text-gray-500 text-sm">Saint-Cloud</div>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="text-yellow-400 text-2xl">★★★★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg italic leading-relaxed">"Excellent professionnel, très réactif et
-                        efficace, a réparé un ordinateur et installé windows 10 en un temps record."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zone d'intervention -->
-    <section class="py-20 bg-primary-dark text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                🗺️ ZONE D'INTERVENTION
-            </h2>
-            <p class="text-2xl mb-12 leading-relaxed">Je me déplace dans toute l'Île-de-France</p>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                    <h3 class="text-2xl font-bold mb-6 text-primary-green leading-tight">Suresnes & Limitrophes</h3>
-                    <div class="space-y-2 text-lg">
-                        <div class="leading-relaxed">• Suresnes</div>
-                        <div class="leading-relaxed">• Puteaux</div>
-                        <div class="leading-relaxed">• Nanterre</div>
-                        <div class="leading-relaxed">• Saint-Cloud</div>
-                        <div class="leading-relaxed">• Rueil-Malmaison</div>
-                        <div class="leading-relaxed">• Paris 16ème (Bois de Boulogne)</div>
-                    </div>
-                </div>
-
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                    <h3 class="text-2xl font-bold mb-6 text-primary-green leading-tight">Proche de Suresnes</h3>
-                    <div class="space-y-2 text-lg">
-                        <div class="leading-relaxed">• Courbevoie</div>
-                        <div class="leading-relaxed">• Neuilly-sur-Seine</div>
-                        <div class="leading-relaxed">• La Garenne-Colombes</div>
-                        <div class="leading-relaxed">• Garches</div>
-                        <div class="leading-relaxed">• Boulogne-Billancourt</div>
-                        <div class="leading-relaxed">• Levallois-Perret</div>
-                        <div class="leading-relaxed">• Sèvres</div>
-                    </div>
-                </div>
-
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                    <div class="space-y-2 text-lg">
-                        <div class="leading-relaxed">• Vaucresson</div>
-                        <div class="leading-relaxed">• Marne-la-Coquette</div>
-                        <div class="leading-relaxed">• Versailles</div>
-                        <div class="leading-relaxed">• Le Vésinet</div>
-                        <div class="leading-relaxed">• Chatou</div>
-                        <div class="leading-relaxed">• Maisons-Laffitte</div>
-                        <hr>
-                        <div class="leading-relaxed">• + Toute l'Île-de-France</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-primary-green/20 p-8 rounded-2xl max-w-4xl mx-auto mb-12 border border-primary-green/30">
-                <h3 class="text-2xl font-bold mb-6 leading-tight">💰 Frais de déplacement</h3>
-                <div class="grid md:grid-cols-3 gap-6 text-lg">
-                    <div>
-                        <div class="font-bold text-primary-green mb-2 leading-tight">Suresnes & Limitrophes</div>
-                        <div class="text-2xl font-bold">GRATUIT</div>
-                    </div>
-                    <div>
-                        <div class="font-bold text-primary-green mb-2 leading-tight">Proche de Suresnes</div>
-                        <div class="text-2xl font-bold">10€</div>
-                    </div>
-                    <div>
-                        <div class="font-bold text-primary-green mb-2 leading-tight">Reste Île-de-France</div>
-                        <div class="text-2xl font-bold">10-20€ max</div>
-                    </div>
-                </div>
-                <p class="text-sm mt-6 text-gray-300 leading-relaxed">Frais inclus si intervention réussie</p>
-            </div>
-
-            <div>
-                <a href="tel:0760487334"
-                   class="bg-primary-green hover:bg-green-400 hover:shadow-2xl hover:shadow-green-500/50 text-white px-12 py-6 rounded-2xl text-3xl font-bold transition-all duration-300 transform hover:scale-105">
-                    📞 M'APPELER MAINTENANT
-                </a>
-            </div>
-        </div>
-    </section>
+    @include('partials.reviews')
+    @include('partials.faq')
+    @include('partials.zone')
+    @include('partials.cta')
 @endsection

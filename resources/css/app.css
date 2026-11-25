@@ -2,124 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Styles personnalisés pour empêcher le zoom sur mobile */
 @layer base {
-    @media screen and (max-width: 768px) {
-        input, textarea, select {
-            font-size: 16px !important;
-            transform-origin: left top;
-            transform: scale(1);
+    :root {
+        interpolate-size: allow-keywords;
+    }
+
+    /* Large root size on purpose: much of the audience reads better with bigger text */
+    html {
+        font-size: 106.25%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6.5rem;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    @media (min-width: 768px) {
+        html {
+            font-size: 112.5%;
         }
     }
 
-    html {
-        scroll-behavior: smooth;
-    }
-
     body {
-        font-feature-settings: "kern" 1, "liga" 1;
+        @apply bg-white font-sans text-ink antialiased;
+        line-height: 1.6;
         text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3 {
+        text-wrap: balance;
+    }
+
+    p, li, dd {
+        text-wrap: pretty;
+    }
+
+    :focus-visible {
+        outline: 3px solid theme('colors.seine.DEFAULT');
+        outline-offset: 3px;
+        border-radius: 6px;
+    }
+
+    ::selection {
+        background: theme('colors.call.DEFAULT');
+        color: theme('colors.ink.DEFAULT');
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *, *::before, *::after {
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+        }
     }
 }
 
-/* Composants personnalisés */
 @layer components {
-    .btn-primary {
-        @apply bg-gradient-to-r from-primary-blue to-primary-green hover:from-blue-600 hover:to-green-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105;
+    .container-site {
+        @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
     }
 
-    .btn-secondary {
-        @apply bg-white text-primary-blue border-2 border-primary-blue hover:bg-primary-blue hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300;
+    .h-display {
+        font-size: clamp(2.3rem, 1.4rem + 3.6vw, 4rem);
+        font-weight: 800;
+        line-height: 1.04;
+        letter-spacing: -0.028em;
     }
 
-    .card {
-        @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6;
+    .h-section {
+        font-size: clamp(1.8rem, 1.3rem + 1.8vw, 2.7rem);
+        font-weight: 760;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
     }
 
-    .section-title {
-        @apply text-4xl md:text-5xl font-bold text-primary-dark mb-6 leading-tight;
+    .h-card {
+        @apply text-xl font-bold leading-snug md:text-2xl;
+        letter-spacing: -0.01em;
     }
 
-    .text-gradient {
-        @apply bg-gradient-to-r from-primary-blue to-primary-green bg-clip-text text-transparent;
+    .lead {
+        @apply text-lg text-ink-soft md:text-xl;
+        line-height: 1.55;
     }
 
-    .glow-effect {
-        @apply shadow-lg hover:shadow-glow-green transition-all duration-300;
-    }
-}
-
-/* Utilitaires personnalisés */
-@layer utilities {
-    .text-shadow {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    .link {
+        @apply font-semibold text-seine underline decoration-seine/30 decoration-2 underline-offset-4 transition-colors hover:decoration-seine;
     }
 
-    .text-shadow-lg {
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    .btn {
+        @apply inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-full font-bold transition duration-200 ease-out;
+        min-height: 3.25rem;
+        padding: 0.75rem 1.6rem;
     }
 
-    .backdrop-blur-xs {
-        backdrop-filter: blur(2px);
+    .btn:hover {
+        transform: scale(1.03);
     }
 
-    .leading-relaxed {
-        line-height: 1.625;
+    .btn:active {
+        transform: scale(0.98);
     }
 
-    .leading-tight {
-        line-height: 1.25;
+    @media (prefers-reduced-motion: reduce) {
+        .btn:hover, .btn:active {
+            transform: none;
+        }
     }
-}
 
-/* Animations personnalisées */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
+    .btn-lg {
+        @apply text-xl md:text-2xl;
+        min-height: 4.25rem;
+        padding: 1rem 2rem;
     }
-    50% {
-        transform: translateY(-10px);
+
+    .btn-call {
+        @apply bg-call text-ink hover:bg-[#7BC41C];
     }
-}
 
-.animate-float {
-    animation: float 3s ease-in-out infinite;
-}
-
-/* Styles pour les FAQ accordéons */
-.faq-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.faq-content.active {
-    max-height: 500px;
-    transition: max-height 0.3s ease-in;
-}
-
-/* Styles pour les formulaires */
-.form-input {
-    @apply w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent text-lg transition-all duration-300;
-}
-
-.form-label {
-    @apply block text-lg font-semibold text-gray-700 mb-3;
-}
-
-/* Responsive utilities */
-@media (max-width: 640px) {
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .btn-whatsapp {
+        @apply bg-white text-ink ring-2 ring-inset ring-ink/15 hover:ring-ink/40;
     }
-}
 
-/* Print styles */
-@media print {
-    .no-print {
-        display: none !important;
+    .btn-dark {
+        @apply bg-ink text-white hover:bg-ink/90;
+    }
+
+    .nav-link {
+        @apply whitespace-nowrap rounded-full px-4 py-2 font-semibold text-ink-soft transition-colors hover:bg-paper hover:text-ink;
+    }
+
+    .nav-link[aria-current='page'] {
+        @apply bg-paper text-ink;
+    }
+
+    /* Price list with dotted leaders, like a technician's rate card */
+    .leader {
+        @apply hidden flex-1 border-b-2 border-dotted border-line sm:block;
+        min-width: 2rem;
+        transform: translateY(-0.35em);
+    }
+
+    .faq summary {
+        list-style: none;
+        cursor: pointer;
+    }
+
+    .faq summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .faq details[open] .faq-icon {
+        transform: rotate(45deg);
+    }
+
+    .faq details::details-content {
+        block-size: 0;
+        overflow: hidden;
+        transition: block-size 0.25s ease, content-visibility 0.25s allow-discrete;
+    }
+
+    .faq details[open]::details-content {
+        block-size: auto;
     }
 }
